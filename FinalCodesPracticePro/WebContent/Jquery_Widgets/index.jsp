@@ -38,7 +38,9 @@
 				<ol>
 					<li><a href="jqx_button_demo.jsp">Button Demo </a></li>
 					<li><a href="basic_grid_example.jsp">Basic grid  </a></li>
-					<li>Youtube</li>
+					<li><a href="grid_using_xml.jsp">Grid Create from customer.xml(XML FILE)  </a></li>
+					<li><a href="grid_using_json_content.jsp">Grid Create from JSON Content  </a></li>
+					
 				</ol>
 			</li>
 			 

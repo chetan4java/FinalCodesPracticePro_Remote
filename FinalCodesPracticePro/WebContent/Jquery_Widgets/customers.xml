@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Customers>
+<Customer CustomerID="1" Name="Customer 1"></Customer>
+<Customer CustomerID="2" Name="Customer 2"></Customer>
+</Customers>
