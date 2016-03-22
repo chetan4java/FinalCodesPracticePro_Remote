@@ -1,0 +1,3497 @@
+<!DOCTYPE html>
+<html class="wf-lftetica-i7-inactive wf-lftetica-n2-inactive wf-lftetica-n4-inactive wf-lftetica-n7-inactive wf-inactive" itemscope="" itemtype="http://schema.org/Product" prefix="og: http://ogp.me/ns#"><head>
+	<title>How To Create A Responsive Navigation Menu Using Only CSS : Medialoot</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="In this tutorial we will be creating a basic responsive navigation menu with dropdown using only HTML and CSS. Many navigation menus (especially responsive ones) are created using a combination of HTML, CSS and Javascript. This simple CSS only method will demonstrate that Javascript isn't always necessary!">
+	<meta name="MSSmartTagsPreventParsing" content="true">
+	<meta http-equiv="imagetoolbar" content="no">
+	<meta name="globalsign-domain-verification" content="gEfOb00L8JxPyAXHZUfZGQLk0sWYiQZ1UhOSep_N5H">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="author" href="http://plus.google.com/108809899104069840725?rel=author">
+	
+	
+	
+	<link rel="canonical" href="http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/">
+		
+	
+	<link href="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/e28b2b5cb9d98d55da8cc5e253653faf52f64a3d.css" rel="stylesheet" type="text/css" media="all">
+		
+	<!--[if lte IE 8]>
+		<link href="//static.medialoot.com/new-code-assets/css/ie.css" rel="stylesheet" type="text/css" media="all"/>
+		<script src="//static.medialoot.com/new-code-assets/js/html5.js" type="text/javascript"></script>
+	<![endif]-->
+		
+	<!-- BEGIN TYPEKIT SNIPPET -->
+    <script src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/e33aa48410c93b34e7ae3def6a8d476f4aefebc8.js" async="" type="text/javascript"></script><script src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/i.js" async="" type="text/javascript"></script><script src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/analytics.js" async=""></script><script type="text/javascript" src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/aff6dmf.js" onload="try{Typekit.load();}catch(e){}" async=""></script>
+    <!-- END TYPEKIT SNIPPET -->
+
+	<!-- load jQuery (Google CDN first, if fails, then local version) -->
+	<style type="text/css">.tk-lft-etica{font-family:"lft-etica",sans-serif;}</style><link href="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/d.htm" rel="stylesheet"><script src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/jquery.js"></script>
+	<script>window.jQuery || document.write('<script src="http://medialoot.com/new-code-assets/js/jquery-1.11.2.min.js"><\/script>')</script>
+	
+	<link href="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/glyphs-ad.css" rel="stylesheet" type="text/css" media="all">
+	
+
+<!-- SVG Ad Code -->
+<script src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/api.js"></script>
+<script src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/svgads.js"></script><script src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/TweenMax.js"></script>
+	
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-486257-16', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-486257-16']);
+ 
+
+</script>
+<!-- End Google Analytics -->
+	
+<!-- KISSmetrics -->
+<script type="text/javascript">var _kmq = _kmq || [];
+	var _kmk = _kmk || 'e33aa48410c93b34e7ae3def6a8d476f4aefebc8';
+	function _kms(u){
+	  setTimeout(function(){
+		var d = document, f = d.getElementsByTagName('script')[0],
+		s = d.createElement('script');
+		s.type = 'text/javascript'; s.async = true; s.src = u;
+		f.parentNode.insertBefore(s, f);
+	  }, 1);
+	}
+	_kms('//i.kissmetrics.com/i.js');
+	_kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+<!-- end KISS -->
+	
+<style type="text/css">#top-ad{	width:100%;	height:60px;	background-color:black;	background: url("//medialoot.com/images/top-ad.png") center center;	position:fixed;	top:-60px;	left:0px;	z-index:1020;}#top-ad #ad-close{	top:22px;	right:20px;	color:white;	opacity:.6;	width:18px;	height:18px;	position:absolute;	cursor:pointer;	z-index:2000;}#timer{	position:absolute;	color:white;	font-size:22px;	top:16px;	height:22px;	left:0;	right:0;	margin-right:auto;	margin-left:auto;	width:1140px;	text-align:right;}#timer span{	display:inline-block;	width:48.5px;	text-align:center;}#timer span:last-of-type{	margin-right:193px;}#top-ad a{	width:100%; height:100%; position:absolute;z-index:1500;}</style></head>
+<body style="padding-top: 60px; cursor: default;" class="blog-single menu-right">
+<div id="page">
+			
+		<header style="top: 60px;" id="header" class="ml-header">
+					
+			<div class="top">
+				<div class="fix-width">
+				<a href="http://medialoot.com/blog/">Blog</a>
+				
+				
+								
+				<a href="#login-header" id="login-button" class="dropdown hover-drop">Login</a>
+				<div id="login-header" class="dropdiv">
+					<div class="form">
+						<form class="main_login_form" method="post" action="https://medialoot.com/">
+<div class="hiddenFields">
+<input name="ACT" value="13" type="hidden">
+<input name="RET" value="http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/" type="hidden">
+<input name="site_id" value="1" type="hidden">
+</div>
+
+
+							<fieldset>
+								<h4 class="title">Login</h4>
+								<a href="http://medialoot.com/member/register/" class="create-account">Create an Account »</a>
+								<input class="val-email val-required focus" name="username" value="Email" type="text">
+								<input class="val-email val-required focus" name="password" value="password" type="password">
+								
+								<div class="checkbox">
+									<input value="1" name="auto_login" type="checkbox">
+									<label for="auto_login">Stay Logged in?</label>
+								</div>
+								
+								<input value="Login" type="submit">
+								<a class="forgot_password" href="http://medialoot.com/member/forgot_password">Forgot Password?</a>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+				<div class="basket-holder">
+					<!-- Begin Header Cart -->
+<a href="#ml-basket" class="cart dropdown hover-drop">Cart</a>
+<div id="ml-basket" class="dropdiv">
+	
+		<div class="basket">
+			<div class="basket-item">
+				<ul class="items">
+					<li>There are no items in your cart yet!</li>
+				</ul>
+			</div>
+		</div>
+	
+</div>
+<!-- End Header Cart -->
+				</div>
+								
+				
+			
+				</div><!-- End of Fixed Width -->
+			</div>
+
+			<div class="bottom">
+				<div class="fix-width">
+				<a href="http://medialoot.com/" class="logo"><img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/mcil-36.png"></a>
+				<nav class="menu">
+					<ul>
+						<li class="dropdown"><a href="http://medialoot.com/ui/">UI<span class="dropdown-arrow"></span></a>
+							<ul class="menu-dropdown">
+							<li><a href="http://medialoot.com/ui/search?&amp;category=+51&amp;item_metadata=+&amp;order=date+desc">Design Elements</a></li>
+							<li><a href="http://medialoot.com/ui/search?&amp;category=+52&amp;item_metadata=+&amp;order=date+desc">Coded Elements</a></li>
+							<li><a href="http://medialoot.com/ui/search?&amp;category=+Web&amp;item_metadata=+&amp;order=date+desc">Web</a></li>
+							<li><a href="http://medialoot.com/ui/search?&amp;category=+Mobile&amp;item_metadata=+&amp;order=date+desc">Mobile</a></li>
+							<li><a href="http://medialoot.com/ui/search?&amp;category=+Responsive&amp;item_metadata=+&amp;order=date+desc">Responsive</a></li>
+							<li><a href="http://medialoot.com/ui/search?&amp;category=+Themes&amp;item_metadata=+&amp;order=date+desc">Themes</a></li>
+							</ul>
+						</li>
+						<li class="dropdown"><a href="http://medialoot.com/graphics/">Graphics<span class="dropdown-arrow"></span></a>
+							<ul class="menu-dropdown">
+							<li><a href="http://medialoot.com/graphics/search?&amp;category=+brushes&amp;item_metadata=+&amp;order=date+desc">Brushes</a></li>
+							<li><a href="http://medialoot.com/graphics/search?&amp;category=+9&amp;item_metadata=+&amp;order=date+desc">Textures &amp; Backgrounds</a></li>
+							<li><a href="http://medialoot.com/graphics/search?&amp;category=+vectors&amp;item_metadata=+&amp;order=date+desc">Vectors</a></li>
+							<li><a href="http://medialoot.com/graphics/search?&amp;category=+illustrations&amp;item_metadata=+&amp;order=date+desc">Illustrations</a></li>
+							<li><a href="http://medialoot.com/graphics/search?&amp;category=+patterns&amp;item_metadata=+&amp;order=date+desc">Patterns</a></li>
+							<li><a href="http://medialoot.com/graphics/search?&amp;category=+10&amp;item_metadata=+&amp;order=date+desc">Styles &amp; Effects</a></li>
+							</ul>
+						</li>
+						<li class="dropdown"><a href="http://medialoot.com/icons/">Icons<span class="dropdown-arrow"></span></a>
+							<ul class="menu-dropdown">
+							<li><a href="http://medialoot.com/icons/search?&amp;category=+monochrome&amp;item_metadata=+&amp;order=date+desc">Monochrome</a></li>
+							<li><a href="http://medialoot.com/icons/search?&amp;category=+34&amp;item_metadata=+&amp;order=date+desc">Flat/Minimal</a></li>
+							<li><a href="http://medialoot.com/icons/search?&amp;category=+detailed&amp;item_metadata=+&amp;order=date+desc">Detailed</a></li>
+							<li><a href="http://medialoot.com/icons/search?&amp;category=+interface&amp;item_metadata=+&amp;order=date+desc">Interface</a></li>
+							<li><a href="http://medialoot.com/icons/search?&amp;category=+37&amp;item_metadata=+&amp;order=date+desc">Social Media</a></li>
+							<li><a href="http://medialoot.com/icons/search?&amp;category=+specialty&amp;item_metadata=+&amp;order=date+desc">Specialty</a></li>
+							<li><a href="http://medialoot.com/icons/search?&amp;category=+39&amp;item_metadata=+&amp;order=date+desc">Icon Fonts</a></li>
+							</ul>
+						</li>
+						<li><a href="http://medialoot.com/fonts/">Fonts</a></li>
+						<li class="dropdown"><a href="http://medialoot.com/print/">Mockup<span class="dropdown-arrow"></span></a>
+							<ul class="menu-dropdown">
+							<li><a href="http://medialoot.com/print/search?&amp;category=+28&amp;item_metadata=+&amp;order=date+desc">Product Mockups</a></li>
+							<li><a href="http://medialoot.com/print/search?&amp;category=+resumes&amp;item_metadata=+&amp;order=date+desc">Resumes</a></li>
+							<li><a href="http://medialoot.com/print/search?&amp;category=+30&amp;item_metadata=+&amp;order=date+desc">Business Cards</a></li>
+							<li><a href="http://medialoot.com/print/search?&amp;category=+31&amp;item_metadata=+&amp;order=date+desc">Brochures/Flyers</a></li>
+							<li><a href="http://medialoot.com/print/search?&amp;category=+32&amp;item_metadata=+&amp;order=date+desc">Stationery &amp; Branding</a></li>
+							</ul>
+						</li>
+						<li><a href="http://medialoot.com/free/">Freebies</a></li>
+					</ul>
+				</nav>
+				<a class="join-link" href="http://medialoot.com/join/">Join us</a>				<div class="search-form">
+					<form action="http://medialoot.com/browse/search" id="topsearch">
+					<input name="channel" value="resources" type="hidden">
+						<fieldset>
+							<div class="row">
+								<div style="width: 48px;" class="selectArea select topsearchselect ml-header"><span class="left"></span><span class="center">All</span><a href="#" class="selectButton"></a><div style="display: none;" class="disabled"></div></div><select class="select topsearchselect ml-header outtaHere" name="category">
+									<option value=""></option>
+									<option value="" selected="selected">All</option>
+									<option value="User Interface" class="ui">UI</option>
+									<option value="Graphic Art">Graphics</option>
+									<option value="Icons">Icons</option>
+									<option value="Fonts">Fonts</option>
+									<option value="Print">Print</option>
+									<option value="articles">Articles</option>
+								</select>
+								<div class="text-fieldset">
+									<input class="text focus" name="keywords" type="text">
+								</div>
+								<div class="submit-fieldset">
+									<input class="submit" value="" type="submit">
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+
+			
+														
+		
+	</header>
+		
+	
+
+
+
+    <!--Start Single Article-->
+    <div class="top-banner category">
+    	<div class="overlay"></div>
+    	
+    		<a href="http://medialoot.com/blog/how-to-design-a-coming-soon-page/" id="paginate-back"></a>
+    	
+    	
+    		<a href="http://medialoot.com/blog/how-to-maximize-productivity-working-from-home/" id="paginate-forward"></a>
+    	
+    
+    
+    		<div class="img-center"><img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/1140x430_CSS-Only-Navigation-Menu-Blog-Image.jpg" alt="How To Create A Responsive Navigation Menu Using Only CSS"></div>
+    		
+    		
+    </div>
+    
+    	<div class="fix-width">
+		<div class="email-banner">
+			<p>Get weekly design tips, tutorials, freebies, and articles to your inbox</p>
+			<form action="http://medialoot.us5.list-manage.com/subscribe/post?u=2bcff092c029bf5f6885526bc&amp;id=0252b57bec" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form-blogtop" class="validate" target="_blank" novalidate="">
+			<fieldset>
+				<div class="row">
+					<input value="email@example.com" class="focus" name="EMAIL" type="email">
+					<input value="Subscribe" class="submit" name="subscribe" type="submit">
+				</div>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>
+			</fieldset>
+			</form>
+			<div class="clear"></div>
+		</div>
+	</div>
+		
+        		<div id="main">
+        			<div class="fix-width">
+        				<div id="content" class="static blog">
+        				<div class="block-white">
+        					<div class="metadata">
+        						<p class="date">April 01, 2014</p>
+        						<p class="category"> <a href="http://medialoot.com/blog/category/tutorials">Tutorials</a></p>
+        						<p class="comments"><a href="#comments-location">158 Comments</a></p>
+        						<div class="clear"></div>
+        					</div>
+        					<div class="article-content">
+        						        						<h1>How To Create A Responsive Navigation Menu Using Only CSS</h1>
+        						<p class="summary">In this tutorial we will be creating a 
+basic responsive navigation menu with dropdown using only HTML and CSS. 
+Many navigation menus (especially responsive ones) are created using a 
+combination of HTML, CSS and Javascript. This simple CSS only method 
+will demonstrate that Javascript isn't always necessary!</p>
+        						    						
+        						
+        						<p>The code we will create includes only the most 
+essential CSS required for structure and basic styling. This makes it 
+much easier to follow and understand the purpose of each line of code. 
+It also means that the end product is primed and ready for your unique 
+customization.</p>
+
+<a href="http://www.medialoot.com/preview/css-only-navigation-menu/index.html" style=" font-size: 18px;display: block; color: #fff; background: #aee028; width: 800px; text-decoration: none; border-radius: 5px; height: 50px; text-align: center; line-height: 50px; font-family: Helvetica, Arial, sans-serif; margin-bottom: 20px;">Live Demo</a>
+
+<h2 class="full-width">A Quick Message</h2>
+<p>Big thanks to the commenters that informed us of an issue this code 
+was having on mobile devices! We have now amended the code using the 
+checkbox method found here: http://bit.ly/1pMflzW as suggested by Sean 
+Savoie.</p>
+
+
+<h2 class="full-width">The HTML</h2>
+<p>As you can see I have declared the HTML5 doctype, and included the basic page structure. The only content within the <em>body</em>
+ tags is a nested unordered list. To demonstrate which top level links 
+will have dropdowns, I have included a unicode down arrow (￬).</p>
+<pre class="prettyprint">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;CSS Only Navigation Menu&lt;/title&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+	&lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;ul id="menu"&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href="#"&gt;About ￬&lt;/a&gt;
+			&lt;ul class="hidden"&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Who We Are&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;What We Do&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href="#"&gt;Portfolio ￬&lt;/a&gt;
+			&lt;ul class="hidden"&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Photography&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Web &amp; User Interface Design&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Illustration&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;News&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h2 class="full-width">The CSS</h2>
+<p>First of all, some basic styling to the ul and li elements to remove 
+bullet points and other list styles. The inline-block and float:left 
+attributes make the list display horizontally.</p>
+<pre class="prettyprint">/*Strip the ul of padding and list styling*/
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	position: absolute;
+}
+
+/*Create a horizontal list with spacing*/
+li {
+	display:inline-block;
+	float: left;
+	margin-right: 1px;
+}
+</pre>
+
+<p>The following attributes are almost exclusively for aesthetic appeal.
+ If you intend to style this menu to your liking then this is the 
+section of code to fiddle about with.</p>
+<pre class="prettyprint">/*Style for menu links*/
+li a {
+	display:block;
+	min-width:140px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+	background: #2f3036;
+	text-decoration: none;
+}
+
+/*Hover state for top level links*/<span id="transmark"></span>
+li:hover a {
+	background: #19c589;
+}
+
+/*Style for dropdown links*/
+li:hover ul a {
+	background: #f3f3f3;
+	color: #2f3036;
+	height: 40px;
+	line-height: 40px;
+}
+
+/*Hover state for dropdown links*/
+li:hover ul a:hover {
+	background: #19c589;
+	color: #fff;
+}
+</pre>
+
+<p>Next up, some styling for the dropdown links. The first class defines
+ that the dropdown will not be visible by default. And the final class 
+says that the dropdown element will become visible on top level link 
+hover.</p>
+<pre class="prettyprint">/*Hide dropdown links until they are needed*/
+li ul {
+	display: none;
+}
+
+/*Make dropdown links vertical*/
+li ul li {
+	display: block;
+	float: none;
+}
+
+/*Prevent text wrapping*/
+li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+/*Display the dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+}
+</pre>
+
+<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/1.jpg" alt="responsive menu css3">
+
+<p>The navigation menu is ready for desktop use now, however we should 
+also include some love for mobile users. Using a media query I target 
+devices with a max width of 760px and make a few changes to the code.</p>
+<pre class="prettyprint">/*Responsive Styles*/
+
+@media screen and (max-width : 760px){
+	/*Make dropdown links appear inline*/
+	ul {
+		position: static;
+		display: none;
+	}
+	/*Create vertical spacing*/
+	li {
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	ul li, li a {
+		width: 100%;
+	}
+}
+</pre>
+
+<h2 class="full-width">Optional Final Step</h2>
+<p>Space is limited on mobile devices, so it would be cool if we also 
+had a button prompting mobile users to click a button before displaying 
+the whole menu. To do this a couple of lines of code to the HTML where 
+you want the button to appear.</p>
+<pre class="prettyprint">&lt;label for="show-menu" class="show-menu"&gt;Show Menu&lt;/label&gt;
+&lt;input type="checkbox" id="show-menu" role="button"&gt;
+</pre>
+
+<p>Add the following code into the CSS anywhere <em>outside</em> the media query:</p>
+<pre class="prettyprint">/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	color: #fff;
+	background: #19c589;
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+</pre>
+And this code <em>within</em> the media query:
+<pre class="prettyprint">	/*Display 'show menu' link*/
+	.show-menu {
+		display:block;
+	}
+</pre>
+
+<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/2.jpg" alt="responsive menu css3">
+
+<h2 class="full-width">Complete Code</h2>
+
+<p>HTML:</p>
+<pre class="prettyprint">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;CSS Only Navigation Menu&lt;/title&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+	&lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;label for="show-menu" class="show-menu"&gt;Show Menu&lt;/label&gt;
+	&lt;input type="checkbox" id="show-menu" role="button"&gt;
+		&lt;ul id="menu"&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href="#"&gt;About ￬&lt;/a&gt;
+			&lt;ul class="hidden"&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Who We Are&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;What We Do&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href="#"&gt;Portfolio ￬&lt;/a&gt;
+			&lt;ul class="hidden"&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Photography&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Web &amp; User Interface Design&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Illustration&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;News&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>CSS:</p>
+<pre class="prettyprint">/*Strip the ul of padding and list styling*/
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	position: absolute;
+}
+
+/*Create a horizontal list with spacing*/
+li {
+	display:inline-block;
+	float: left;
+	margin-right: 1px;
+}
+
+/*Style for menu links*/
+li a {
+	display:block;
+	min-width:140px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+	background: #2f3036;
+	text-decoration: none;
+}
+
+/*Hover state for top level links*/
+li:hover a {
+	background: #19c589;
+}
+
+/*Style for dropdown links*/
+li:hover ul a {
+	background: #f3f3f3;
+	color: #2f3036;
+	height: 40px;
+	line-height: 40px;
+}
+
+/*Hover state for dropdown links*/
+li:hover ul a:hover {
+	background: #19c589;
+	color: #fff;
+}
+
+/*Hide dropdown links until they are needed*/
+li ul {
+	display: none;
+}
+
+/*Make dropdown links vertical*/
+li ul li {
+	display: block;
+	float: none;
+}
+
+/*Prevent text wrapping*/
+li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+/*Display the dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	color: #fff;
+	background: #19c589;
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+
+/*Responsive Styles*/
+
+@media screen and (max-width : 760px){
+	/*Make dropdown links appear inline*/
+	ul {
+		position: static;
+		display: none;
+	}
+	/*Create vertical spacing*/
+	li {
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	ul li, li a {
+		width: 100%;
+	}
+	/*Display 'show menu' link*/
+	.show-menu {
+		display:block;
+	}
+}
+</pre>
+
+<h2 class="full-width">Conclusion &amp; Live Demo</h2>
+
+<a href="http://www.medialoot.com/preview/css-only-navigation-menu/index.html" style=" font-size: 18px;display: block; color: #fff; background: #aee028; width: 800px; text-decoration: none; border-radius: 5px; height: 50px; text-align: center; line-height: 50px; font-family: Helvetica, Arial, sans-serif; margin-bottom: 20px;">Live Demo</a>
+
+<p>This code should work just fine in modern browsers, and doesn't rely 
+on any javascript which can slow down page load times. Be sure to check 
+out the live demo and use the code however you like!</p>
+
+<h2 class="full-width">Pre-Coded Resources</h2>
+
+<p>Love the tutorial but still want everything nicely packaged? We've got a few resources for you then.</p>
+
+<a href="http://medialoot.com/item/5-navigation-menu-bars/"><img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/navigation01-full.png" alt="5 CSS Navigation Menu Bars" class="full-width"></a>
+<div class="num-para">
+<span class="num">1</span>
+<a href="http://medialoot.com/item/5-navigation-menu-bars/"><img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/navigation01.png" alt="5 CSS Navigation Menu Bars"></a>
+<h4>5 CSS Navigation Menu Bars</h4>
+<p>This premium pack includes 5 unique navigation menu bar designs that 
+can be easily implemented into your existing design concepts of coded 
+projects.</p>
+<a href="http://medialoot.com/item/5-navigation-menu-bars/" class="read-more">View Resource &gt;</a>
+</div>
+
+<a href="http://medialoot.com/item/flat-css3-menu-bars/"><img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/navigation02-full.png" alt="Flat CSS3 Menu Bars" class="full-width"></a>
+<div class="num-para">
+<span class="num">2</span>
+<a href="http://medialoot.com/item/flat-css3-menu-bars/"><img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/navigation02.png" alt="Flat CSS3 Menu Bars"></a>
+<h4>Flat CSS3 Menu Bars</h4>
+<p>This premium pack contains 2 stylish web navigation menus, fully 
+coded using HTML5 and CSS3. They're very modern and easily to edit and 
+implement into your designs.</p>
+<a href="http://medialoot.com/item/flat-css3-menu-bars/" class="read-more">View Resource &gt;</a>
+</div>
+
+<a href="http://medialoot.com/item/pretty-css-menu-bars/"><img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/navigation03-full.png" alt="Pretty CSS3 Menu Bars" class="full-width"></a>
+<div class="num-para">
+<span class="num">3</span>
+<a href="http://medialoot.com/item/pretty-css-menu-bars/"><img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/navigation03.png" alt="Pretty CSS3 Menu Bars"></a>
+<h4>Pretty CSS3 Menu Bars</h4>
+<p>This premium pack contains 2 super sleek web navigation menus, fully 
+coded using HTML5 and CSS3. Also included in the package is the original
+ .psd source file for your design concepts.</p>
+<a href="http://medialoot.com/item/pretty-css-menu-bars/" class="read-more">View Resource &gt;</a>
+</div>
+        						
+        						        						
+        						<!--<div class="tags">
+        							<ul class="tag-list">
+        								
+        									<li><a href="292-css"><span>css</span></a></li>
+        								
+        									<li><a href="804-navigation"><span>navigation</span></a></li>
+        								
+        									<li><a href="301-html"><span>html</span></a></li>
+        								
+        							</ul>
+        							<div class="clear"></div>
+        						</div>-->
+        						
+        						<!--<div class="advertisement grey-ad-bg">
+        							<script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=11670586&PluID=0&w=250&h=175&ord=$$CacheBustingToken$$&wm=transparent[timestamp]&ucm=true"></script>
+        							<noscript>
+        							<a href="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=brd&FlightID=11670586&Page=&PluID=0&Pos=40921938" target="_blank"><img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&FlightID=11670586&Page=&PluID=0&Pos=40921938" border=0 width=250 height=175></a>
+        							</noscript>
+        						</div>-->
+        						
+        						<hr>
+        						
+        						<div class="social">						
+        							
+        							<h3>Share This Post</h3>
+        							<a class="post-share facebook" href="http://www.facebook.com/plugins/like.php?href=http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=1529196177293085" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=100,width=200');return false;">Facebook<span>61</span></a>
+        							<a class="post-share twitter" href="https://twitter.com/share?url=http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/&amp;text=How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS&amp;via=medialoot" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">Twitter<span>54</span></a>
+        							<a class="post-share gplus" href="https://plus.google.com/share?url=http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">Google Plus<span>18</span></a>
+        							<a class="post-share stumble" href="http://www.stumbleupon.com/submit?url=http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=800');return false;">Stumbleupon<span>0</span></a>
+        							<div class="clear"></div>
+        						
+        						</div>
+        						        						<div class="big-blog-email-box">
+        							<div class="top">
+        								<span class="email-icon"></span>
+        								<h3>Sign up for more</h3>
+        							</div>
+        							<div class="bottom">
+        								<div class="checked-div">
+        									<span class="check-icon"></span>
+        									<p>Free premium quality resources and design files</p>
+        								</div>
+        								<div class="checked-div">
+        									<span class="check-icon"></span>
+        									<p>Web and graphic design tutorials and quick tips</p>
+        								</div>
+        								<div class="checked-div">
+        									<span class="check-icon"></span>
+        									<p>Industry related articles and trend discussions</p>
+        								</div>
+        								<form action="http://medialoot.us5.list-manage.com/subscribe/post?u=2bcff092c029bf5f6885526bc&amp;id=0252b57bec" method="post" id="mc-embedded-subscribe-form-blogbottom" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+        								<fieldset>
+        									<div class="row">
+        										<input value="email@example.com" class="focus" name="EMAIL" type="email">
+        										<input value="Subscribe" class="submit" name="subscribe" type="submit">
+        									</div>
+        									<div id="mce-responses" class="clear">
+        										<div class="response" id="mce-error-response" style="display:none"></div>
+        										<div class="response" id="mce-success-response" style="display:none"></div>
+        									</div>
+        								</fieldset>
+        								</form>
+        							</div>
+        						</div>      						
+        						        						
+        												<div class="related-posts">
+							
+							
+														<h4>Related Posts</h4>
+							<div class="clear"></div>
+														<div class="post left">
+							<a href="http://medialoot.com/blog/how-to-make-an-impossible-triangle-shape-in-illustrator/" class="post-image"><img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/Penrose-Triangle-Tutorial-Post-Image.jpg"></a>
+							<div class="metadata">
+								<p class="date">September 15, 2015</p>
+								<p class="comments"><a href="http://medialoot.com/blog/how-to-make-an-impossible-triangle-shape-in-illustrator/#comments-location">0</a></p>
+								<p class="author">Tony Thomas</p>
+							</div>
+							<h3><a href="http://medialoot.com/blog/how-to-make-an-impossible-triangle-shape-in-illustrator/">How to Make an Impossible Triangle Shape in Illustrator</a></h3>
+							<p>The Penrose triangle is an impossible shape that has been 
+popular with artists and designers since 1934 when it was first created 
+by Oscar Reutersvärd. Even today it is still often used in graphic 
+design, but although it appears to be a simple shape it can actually be 
+very tricky...<a class="read-more">Read more</a></p>
+							
+							</div>
+							
+														<div class="post right">
+							<a href="http://medialoot.com/blog/how-to-use-a-texture-as-a-layer-mask-in-photoshop/" class="post-image"><img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/Texture-Layer-Mask-Post-Image.jpg"></a>
+							<div class="metadata">
+								<p class="date">September 01, 2015</p>
+								<p class="comments"><a href="http://medialoot.com/blog/how-to-use-a-texture-as-a-layer-mask-in-photoshop/#comments-location">0</a></p>
+								<p class="author">Tony Thomas</p>
+							</div>
+							<h3><a href="http://medialoot.com/blog/how-to-use-a-texture-as-a-layer-mask-in-photoshop/">How to Use A Texture as a Layer Mask in Photoshop</a></h3>
+							<p>If you've ever wondered how to use a texture as a layer mask 
+in Photoshop instead of always using brushes, then this simple tutorial 
+will show you how to do just that.<a class="read-more">Read more</a></p>
+							
+							</div>
+							
+														<div class="post left">
+							<a href="http://medialoot.com/blog/create-an-easy-faded-vintage-photo-effect-in-photoshop/" class="post-image"><img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/vintage-photo-tutorial.jpg"></a>
+							<div class="metadata">
+								<p class="date">August 25, 2015</p>
+								<p class="comments"><a href="http://medialoot.com/blog/create-an-easy-faded-vintage-photo-effect-in-photoshop/#comments-location">0</a></p>
+								<p class="author">Nathan Brown</p>
+							</div>
+							<h3><a href="http://medialoot.com/blog/create-an-easy-faded-vintage-photo-effect-in-photoshop/">Create an Easy Faded Vintage Photo Effect in Photoshop</a></h3>
+							<p>Vintage photo effects have incredible appeal. You can take a, 
+seemingly ordinary, well exposed photo, and add a touch of faded vintage
+ lighting and suddenly the image is transformed. In this tutorial I'll 
+walk you through my process to achieve a faded vintage look in 
+Photoshop. It's surprisingly easy and...<a class="read-more">Read more</a></p>
+							
+							</div>
+							
+														<div class="post right">
+							<a href="http://medialoot.com/blog/how-to-create-a-unique-abstract-line-background-in-photoshop/" class="post-image"><img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/abstract-lines-background-post-image.jpg"></a>
+							<div class="metadata">
+								<p class="date">August 18, 2015</p>
+								<p class="comments"><a href="http://medialoot.com/blog/how-to-create-a-unique-abstract-line-background-in-photoshop/#comments-location">0</a></p>
+								<p class="author">Tony Thomas</p>
+							</div>
+							<h3><a href="http://medialoot.com/blog/how-to-create-a-unique-abstract-line-background-in-photoshop/">How to Create a Unique Abstract Line Background in Photoshop</a></h3>
+							<p>In this tutorial I will show you how to create an abstract 
+background using gradients,vector shapes and layer styles to create the 
+illusion of depth. The results can then be customized and made unique to
+ your own personal preference.<a class="read-more">Read more</a></p>
+							
+							</div>
+							
+							<div class="clear"></div>
+						</div>
+        						
+        					</div>
+        					</div>
+        					<div class="block-white">
+        						
+<!-- Begin Embed Comments -->
+<div id="comments">
+<div id="comments-location"></div>
+
+<section class="comment">
+	<div class="section-title">
+		<h4>Comments</h4>
+	</div>
+	<ul class="comment-list">
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431358">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/853beb394b1b52585c7b89372d5da108.jpg" alt="Marc">
+					</figure>
+					<h4>Marc</h4>
+					<span><p>For people looking for a simpler way to create a menu, there is also a website called http://www.generatecss.com.</p>
+
+<p>All you you need to do is enter the link details, and the menu along 
+with all the CSS and HTML will be created for you. Pretty neat!</p></span>
+					<span class="time">Apr 6, 2014 at 5:50 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431359">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/f27fff54d2b302c6f0150afed35be63f.jpg" alt="Jenn Coyle">
+					</figure>
+					<h4><a href="http://medialoot.com/main/team" rel="nofollow" target="_blank">Jenn Coyle</a></h4>
+					<span><p>Awesome, thanks for the tip, Marc!</p></span>
+					<span class="time">Apr 7, 2014 at 9:43 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432115">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/ce27265cac27a446109dfc0bec57867e.jpg" alt="sonu">
+					</figure>
+					<h4><a href="http://funtosms.com/" rel="nofollow" target="_blank">sonu</a></h4>
+					<span><p>For people looking for a simpler way to create a menu, there is also a website called http://www.funtosms.com.</p></span>
+					<span class="time">Aug 8, 2014 at 1:47 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432570">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/5895ca322d5f71b7f19d7dcf8b1c96a5.jpg" alt="pawan kumar">
+					</figure>
+					<h4>pawan kumar</h4>
+					<span><p>It’s realy nice tutorial….....</p></span>
+					<span class="time">Oct 30, 2014 at 5:19 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431368">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/6e0c446521bd99a0243aad3398e58aaa.jpg" alt="Carlos">
+					</figure>
+					<h4>Carlos</h4>
+					<span><p>I like it, but it dosnt work on mobile, in mobile we cant 
+use the hover as we use it in Desktop, i tried to use it on my WP, but 
+it dosnt work.</p></span>
+					<span class="time">Apr 9, 2014 at 5:04 pm</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431372">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/f27fff54d2b302c6f0150afed35be63f.jpg" alt="Jenn Coyle">
+					</figure>
+					<h4><a href="http://medialoot.com/main/team" rel="nofollow" target="_blank">Jenn Coyle</a></h4>
+					<span><p>Hi Carlos, I’m able to tap to enable the dropdowns on 
+mobile. The hover effects to change the background color won’t work the 
+same way on mobile, otherwise the user would have to tap twice.</p></span>
+					<span class="time">Apr 10, 2014 at 10:17 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431714">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/2e8ea1a335601ca26450c4e96a7451ac.jpg" alt="conceptic">
+					</figure>
+					<h4><a href="http://www.concepticlabs.com/" rel="nofollow" target="_blank">conceptic</a></h4>
+					<span><p>what is…this..</p></span>
+					<span class="time">Jun 16, 2014 at 4:42 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="433020">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/a256b7b6e60cf48badbc6bc2fa065ae5.jpg" alt="vid">
+					</figure>
+					<h4><a href="http://ektamedicaltravel.com/" rel="nofollow" target="_blank">vid</a></h4>
+					<span><p>The menu does not drop down when clicked on Blackberry or any mobile. It works fine on bigger screens. Can you please help?</p></span>
+					<span class="time">Mar 14, 2015 at 3:33 pm</span>
+				</div>
+			</li>
+			</ul>
+	
+			</ul>
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431412">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/087dc2ac10949e210fa11d717b3b7c0b.jpg" alt="Robert">
+					</figure>
+					<h4><a href="http://website/" rel="nofollow" target="_blank">Robert</a></h4>
+					<span><p>Why doesn’t the link work in iPhone device? When you try 
+to click on a link it only shut down the “show menu”. It works in 
+desktop mode.</p>
+
+<p>Example link:</p>
+
+<p>&lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Fwebsite.com">homepage</a>&lt;/li&gt;</p></span>
+					<span class="time">Apr 21, 2014 at 8:07 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431416">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/b642b4217b34b1e8d3bd915fc65c4452.jpg" alt="Dan">
+					</figure>
+					<h4>Dan</h4>
+					<span><p>You need a link inside:</p>
+
+<p>&lt;li&gt;<a href="http://medialoot.com/?URL=%23">Home</a>&lt;/li&gt;</p></span>
+					<span class="time">Apr 22, 2014 at 10:45 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431417">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/b642b4217b34b1e8d3bd915fc65c4452.jpg" alt="Dan">
+					</figure>
+					<h4>Dan</h4>
+					<span><p>Oh that didn’t allow me to type in the anchor tag</p></span>
+					<span class="time">Apr 22, 2014 at 10:46 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			</ul>
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431578">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/481c2b78ba9bcdfcb9b3fb3e1918f33d.jpg" alt="jah">
+					</figure>
+					<h4>jah</h4>
+					<span><p>Thanks a lot. awesome menu and clean codes!! <br>
+Hope you have footer designs too</p></span>
+					<span class="time">May 25, 2014 at 12:43 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431592">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/536461d8830cee35d819ee8ec82e9f01.jpg" alt="fws">
+					</figure>
+					<h4><a href="http://na/" rel="nofollow" target="_blank">fws</a></h4>
+					<span><p>Links do not work when screen is reduced to trigger the 
+media query (or on phone)—see the quick demo at 
+http://www.screencast.com/t/0GY07Gbza</p></span>
+					<span class="time">May 26, 2014 at 11:48 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431593">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/536461d8830cee35d819ee8ec82e9f01.jpg" alt="NameFWS">
+					</figure>
+					<h4><a href="http://na/" rel="nofollow" target="_blank">NameFWS</a></h4>
+					<span><p>FWIW the browser status bar DOES show the correct link, but clicking merely closes the dropdown…</p></span>
+					<span class="time">May 26, 2014 at 11:50 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431614">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/bab8c15afe2798d2c147a10b7e8eb1cf.png" alt="jim">
+					</figure>
+					<h4><a href="http://website/" rel="nofollow" target="_blank">jim</a></h4>
+					<span><p>same issue? what am I missing?</p></span>
+					<span class="time">May 28, 2014 at 12:01 pm</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431618">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/3ee1305594b5668983d0b274cc577243.jpg" alt="Patrick">
+					</figure>
+					<h4><a href="http://tipict.nl/" rel="nofollow" target="_blank">Patrick</a></h4>
+					<span><p>Same issue. What am I missing?</p></span>
+					<span class="time">May 30, 2014 at 1:32 pm</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431619">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/3ee1305594b5668983d0b274cc577243.jpg" alt="Patrick">
+					</figure>
+					<h4><a href="http://www.tipict.nl/" rel="nofollow" target="_blank">Patrick</a></h4>
+					<span><p>Demo has the same problem. Think the code needs some more code, but I don’t know how to fix it.</p></span>
+					<span class="time">May 30, 2014 at 1:35 pm</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431620">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/3ee1305594b5668983d0b274cc577243.jpg" alt="Patrick">
+					</figure>
+					<h4><a href="http://www.tipict.nl/" rel="nofollow" target="_blank">Patrick</a></h4>
+					<span><p>I’ve added the following code:</p>
+
+<p>nav ul:active{<br>
+display: block;<br>
+}</p>
+
+<p>...to the following css media section:</p>
+
+<p>@media only screen<br>
+and (max-width : [lowrespx]) {<br>
+}</p>
+
+<p>Result: if you click on a submenu, it doesn’t close merely.</p>
+
+<p>Hope it’s helpful for the rest of you.</p></span>
+					<span class="time">May 30, 2014 at 2:14 pm</span>
+				</div>
+			</li>
+			</ul>
+	
+			</ul>
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431623">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/cf65e3aead7f397385ab0c2691a35cfb.jpg" alt="Tony Thomas">
+					</figure>
+					<h4><a href="http://medialoot.com/main/team" rel="nofollow" target="_blank">Tony Thomas</a></h4>
+					<span><p>I’ll check this out and post an update with a fix ASAP.</p></span>
+					<span class="time">May 30, 2014 at 4:41 pm</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431630">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/fc43671c1677828500c3e2064a3ba5c9.jpg" alt="mark">
+					</figure>
+					<h4>mark</h4>
+					<span><p>This could be very useful to me. Is there a fix yet for the mobile issue?</p></span>
+					<span class="time">Jun 1, 2014 at 6:36 pm</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431651">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/cf65e3aead7f397385ab0c2691a35cfb.jpg" alt="Tony Thomas">
+					</figure>
+					<h4><a href="http://medialoot.com/main/team" rel="nofollow" target="_blank">Tony Thomas</a></h4>
+					<span><p>Hey everybody, this is fixed now!</p></span>
+					<span class="time">Jun 4, 2014 at 8:52 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431639">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/8ffa9535fe7db91e79abca9909783288.jpg" alt="Sean Savoie">
+					</figure>
+					<h4>Sean Savoie</h4>
+					<span><p>Hey for everyone trying to figure out the mobile link fix I
+ think I may have found a better solution than the one presented. It 
+involves a check-box that hides and shows the div when clicked, or 
+pressed. Still using only CSS which is nice as well. Check it out here: 
+http://bit.ly/1pMflzW</p></span>
+					<span class="time">Jun 2, 2014 at 11:51 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431652">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/cf65e3aead7f397385ab0c2691a35cfb.jpg" alt="Tony Thomas">
+					</figure>
+					<h4><a href="http://medialoot.com/main/team" rel="nofollow" target="_blank">Tony Thomas</a></h4>
+					<span><p>Thanks Sean, I used the checkbox method you found to fix the tutorial code</p></span>
+					<span class="time">Jun 4, 2014 at 8:55 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431665">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/08a17879086e16dc9dec8f027277e810.jpg" alt="Dan">
+					</figure>
+					<h4>Dan</h4>
+					<span><p>I keep trying to float the menu to the right but it’s not happening. Where exactly would that be coded? :)</p></span>
+					<span class="time">Jun 6, 2014 at 12:46 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431669">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/f27fff54d2b302c6f0150afed35be63f.jpg" alt="Jenn Coyle">
+					</figure>
+					<h4><a href="http://medialoot.com/main/team" rel="nofollow" target="_blank">Jenn Coyle</a></h4>
+					<span><p>Hi Dan, if you add <code>right:&nbsp;0;</code> to the ul class for the menu it will float right since it’s positioned absolutely.</p></span>
+					<span class="time">Jun 6, 2014 at 8:48 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431672">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/08a17879086e16dc9dec8f027277e810.jpg" alt="Dan">
+					</figure>
+					<h4><a href="http://website/" rel="nofollow" target="_blank">Dan</a></h4>
+					<span><p>Thanks, Jenn. I kept searching around and found that to be the case. Another lesson learned in CSSdom. :)</p>
+
+<p>The last hurdle I have before it’s just the way I want can be seen in
+ the following link to a test page. Hover on ‘About?’ and you can see 
+the drop-down floats to the right instead of being directly under the 
+main link.</p>
+
+<p>http://sitesetis.com/publicdocs/simplemenu.html</p>
+
+<p>All the code is on the page so you can view the source.</p>
+
+<p>Dan</p></span>
+					<span class="time">Jun 6, 2014 at 1:56 pm</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431678">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/f27fff54d2b302c6f0150afed35be63f.jpg" alt="Jenn Coyle">
+					</figure>
+					<h4><a href="http://medialoot.com/main/team" rel="nofollow" target="_blank">Jenn Coyle</a></h4>
+					<span><p>Hi Dan, Sorry about that. You need to position the ul#menu for right: 0;<br>
+The solution I previously provided is making all ul’s be positioned to 
+the right, so you just need to call out the top level ul ID. Hope that 
+helps.</p></span>
+					<span class="time">Jun 9, 2014 at 6:25 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431776">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/4d9395ef5e192616c622a712d9f0c5c1.jpg" alt="Mohsin Shaikh">
+					</figure>
+					<h4><a href="http://website/" rel="nofollow" target="_blank">Mohsin Shaikh</a></h4>
+					<span><p>Hi guys this is a very simple and easy style of responsive menu without bootstraap i like this</p></span>
+					<span class="time">Jun 24, 2014 at 3:04 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431778">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/a446c88cc0c67947da99b8e05dad9a80.jpg" alt="Gary">
+					</figure>
+					<h4><a href="http://website/" rel="nofollow" target="_blank">Gary</a></h4>
+					<span><p>Hi guys,</p>
+
+<p>This looks great, but I’m struggling to get it working on Windows 
+Phone 8. The Show Menu button works. But tapping on the About or 
+Portfolio buttons does not expand their sub items.</p>
+
+<p>Any work-around for this problem?</p>
+
+<p>Gary</p></span>
+					<span class="time">Jun 24, 2014 at 5:16 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431803">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/a2a440ffc83439a2563548f1d3c33df3.jpg" alt="Deelite">
+					</figure>
+					<h4><a href="http://website/" rel="nofollow" target="_blank">Deelite</a></h4>
+					<span><p>I tried your code, but when I try to roll off the main 
+menu links, the dropdowns just disappear, and I can’t click the sub menu
+ items</p></span>
+					<span class="time">Jun 26, 2014 at 7:49 pm</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431807">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/f27fff54d2b302c6f0150afed35be63f.jpg" alt="Jenn Coyle">
+					</figure>
+					<h4><a href="http://medialoot.com/main/team" rel="nofollow" target="_blank">Jenn Coyle</a></h4>
+					<span><p>Hi there, sorry about that. Can you provide a live link so I can investigate?</p></span>
+					<span class="time">Jun 27, 2014 at 9:37 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431830">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/c4a947e212e7dced918bc05a9f1079d9.jpg" alt="Darshan">
+					</figure>
+					<h4>Darshan</h4>
+					<span><p>I Tried These code but not working in my menu.See only menu button but not work.</p></span>
+					<span class="time">Jul 3, 2014 at 3:36 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431831">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/f27fff54d2b302c6f0150afed35be63f.jpg" alt="Jenn Coyle">
+					</figure>
+					<h4><a href="http://medialoot.com/main/team" rel="nofollow" target="_blank">Jenn Coyle</a></h4>
+					<span><p>Hi Darshan, do you have a live link so I can take a look?</p></span>
+					<span class="time">Jul 3, 2014 at 10:31 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431835">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/5548914047a8004a7e2fc3292edf2498.jpg" alt="JD">
+					</figure>
+					<h4><a href="http://website/" rel="nofollow" target="_blank">JD</a></h4>
+					<span><p>hi there</p>
+
+<p>How could i get this so that the whole block would sit centrally on the page?<br>
+I’ve tried a few things and wrapping it up in a container but it’s not happy. <br>
+Thanks in advance :)</p></span>
+					<span class="time">Jul 3, 2014 at 10:43 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431836">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/f27fff54d2b302c6f0150afed35be63f.jpg" alt="Jenn Coyle">
+					</figure>
+					<h4><a href="http://medialoot.com/main/team" rel="nofollow" target="_blank">Jenn Coyle</a></h4>
+					<span><p>Hi JD, I found <a href="http://medialoot.com/?URL=http%3A%2F%2Fcsswizardry.com%2F2011%2F01%2Fcreate-a-centred-horizontal-navigation%2F" target="_blank">this tutorial</a>
+ on CSSWizardry, and at the bottom there’s an update for a CSS dropdown 
+version if you wanted to take a look at his code. Thanks!</p></span>
+					<span class="time">Jul 3, 2014 at 11:08 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431839">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/4024291fbbc522d12a7289a7b125f664.jpg" alt="Bob">
+					</figure>
+					<h4><a href="http://website/" rel="nofollow" target="_blank">Bob</a></h4>
+					<span><p>I cannot get the Show Menu link to appear on an iPhone. http://bit.ly/1zaSHqR</p>
+
+</span>
+					<span class="time">Jul 3, 2014 at 2:54 pm</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431841">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/cf65e3aead7f397385ab0c2691a35cfb.jpg" alt="Tony Thomas">
+					</figure>
+					<h4><a href="http://medialoot.com/main/team" rel="nofollow" target="_blank">Tony Thomas</a></h4>
+					<span><p>Hi Bob, you need to include this html code where you want the link to appear:</p>
+
+<p>&lt;label for=“show-menu” class=“show-menu”&gt;Show Menu&lt;/label&gt;<br>
+&lt;input type=“checkbox” id=“show-menu” role=“button”&gt;</p></span>
+					<span class="time">Jul 4, 2014 at 5:30 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431843">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/69bddfcf5b63990efeec681adcf45b81.jpg" alt="Bob">
+					</figure>
+					<h4>Bob</h4>
+					<span><p>Thanks Tony, I am an idiot. In my defense, let me say that
+ was my fourth or fifth attempt at trying to get the code to work in my 
+page. It wasn’t until I started with a completely empty page that the 
+dropdown actually worked.</p>
+
+<p>When i put your code into my page things get a little screwy: the 
+green button on the iPhone takes up about the top third of the screen 
+instead of the 50px you intended. Plus the tap (or click on the desktop)
+ on Show menu doesn’t reveal the menu.</p>
+
+<p>I assume (because it works on an empty page) something in my code is conflicting with yours. Now I just have to find it.</p>
+
+<p>But thanks again for your help, I really appreciate it.</p></span>
+					<span class="time">Jul 4, 2014 at 11:36 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431912">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/bb267d733398bd4f6f40ce74c27ca2b0.jpg" alt="Jessica">
+					</figure>
+					<h4><a href="http://website/" rel="nofollow" target="_blank">Jessica</a></h4>
+					<span><p>I finally got this code to work, however, now I am 
+wondering: how do I make the color bar from the links go all the way 
+across the page? Also how do I get the bar to line up flush to the image
+ I have above it? No margins on either.</p></span>
+					<span class="time">Jul 15, 2014 at 5:37 pm</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431920">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/f27fff54d2b302c6f0150afed35be63f.jpg" alt="Jenn Coyle">
+					</figure>
+					<h4><a href="http://medialoot.com/main/team" rel="nofollow" target="_blank">Jenn Coyle</a></h4>
+					<span><p>Hi Jessica, You can do this by putting a div around the ul
+ and specifying its background color and height. To get rid of the 
+margins, I recommend adding on  normalize.css or try using negative 
+margins.</p></span>
+					<span class="time">Jul 16, 2014 at 10:29 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431926">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/bb267d733398bd4f6f40ce74c27ca2b0.jpg" alt="Jessica">
+					</figure>
+					<h4><a href="http://website/" rel="nofollow" target="_blank">Jessica</a></h4>
+					<span><p>Thank you Jenn. I kinda just fudged the numbers for the 
+height to work and be responsive, however i can’t get the margin fixed 
+and still be responsive. Any ideas?</p>
+
+<p>Also, is there a way to make the drop down menu clickable instead of 
+hoverable on  phone (since phones don’t really have the ability to 
+hover)?</p></span>
+					<span class="time">Jul 16, 2014 at 11:26 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			</ul>
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431924">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/b81e4e71575a63c80af501dcce2c1c9c.png" alt="Tice">
+					</figure>
+					<h4><a href="http://blog.tice.de/" rel="nofollow" target="_blank">Tice</a></h4>
+					<span><p>This is a really great and wonderful clean way. No JS just CSS. Thanks! : )</p>
+
+<p>Only one thing: How do I avoid to affect normal lists by that css. I 
+know classes should do, but somehow if I use i.e. .topmenu ul { the 
+margins are ignored and under show menu the navigation ist still in 
+blocks and unhidden.</p>
+
+<p>Can you change that code so it won´t affect normal lists?</p>
+
+<p>Greetings and thanks for the great work, Tice</p></span>
+					<span class="time">Jul 16, 2014 at 10:48 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431925">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/f27fff54d2b302c6f0150afed35be63f.jpg" alt="Jenn Coyle">
+					</figure>
+					<h4><a href="http://medialoot.com/main/team" rel="nofollow" target="_blank">Jenn Coyle</a></h4>
+					<span><p>Hi Tice, thanks for your comment, we’re glad you like 
+this! Since this tutorial is for demonstration purposes only, we didn’t 
+want to get too involved with the code. If you’re looking for more 
+specific code that won’t affect other ul’s and li’s, check out <a href="http://medialoot.com/?URL=http%3A%2F%2Fmedialoot.com%2Fitem%2Fflat-css3-menu-bars%2F">our premium resource</a>.</p></span>
+					<span class="time">Jul 16, 2014 at 10:53 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431945">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/d037e770ffe1b7040e321a39fb4c0891.jpg" alt="Brad">
+					</figure>
+					<h4>Brad</h4>
+					<span><p>I’m close to getting this to work. However, when I hover 
+over the button, the drop down appears, but when I go to click an item 
+in that list the dropdown disapeers.</p>
+
+<p>Also, the dropdown buttons are aligned to the right of my main nav 
+button so they are extended past the left side. I would like to reverse 
+this so they are inline with the left side and extend out the right.</p>
+
+<p>here is my style.css code:</p>
+
+<p><br>
+/*********************************************************************************/<br>
+/* Nav &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; */<br>
+/*********************************************************************************/</p>
+
+<p> #nav<br>
+ {<br>
+&nbsp; position: absolute;<br>
+&nbsp; right: 0em;<br>
+&nbsp; top: 2.2em;<br>
+ }</p>
+
+<p>&nbsp; #nav &gt; ul &gt; li<br>
+&nbsp; {<br>
+&nbsp;  float: left;<br>
+&nbsp; }<br>
+&nbsp; <br>
+&nbsp;  #nav &gt; ul &gt; li:last-child<br>
+&nbsp;  {<br>
+&nbsp;   padding-right: 0;<br>
+&nbsp;  }</p>
+
+<p>&nbsp;  #nav &gt; ul &gt; li &gt; a,<br>
+&nbsp;  #nav &gt; ul &gt; li &gt; span<br>
+&nbsp;  {<br>
+&nbsp;   display: block;<br>
+&nbsp;   margin-left: 0.7em;<br>
+&nbsp;   padding: 0.5em 1.2em;<br>
+&nbsp;   letter-spacing: 0.06em;<br>
+&nbsp;   text-decoration: none;<br>
+&nbsp;   text-transform: uppercase;<br>
+&nbsp;   font-size: 1.1em;<br>
+&nbsp;   outline: 0;<br>
+&nbsp;   color: #333;<br>
+&nbsp;  }</p>
+
+<p>&nbsp;  #nav li.active a<br>
+&nbsp;  {<br>
+&nbsp;   background: #C13333;<br>
+&nbsp;   border-radius: 5px;<br>
+&nbsp;   color: #FFF;<br>
+&nbsp;  }<br>
+&nbsp;  <br>
+&nbsp;  #nav li a<br>
+&nbsp;  {<br>
+&nbsp;   display: block;<br>
+&nbsp;   margin-left: 0.1em;<br>
+&nbsp;   padding: 0.1em 0.1em;<br>
+&nbsp;   letter-spacing: 0.06em;<br>
+&nbsp;   text-decoration: none;<br>
+&nbsp;   text-transform: uppercase;<br>
+&nbsp;   font-size: 0.9em;<br>
+&nbsp;   outline: 0;<br>
+&nbsp;   color: #333;<br>
+&nbsp;  }<br>
+&nbsp;  <br>
+&nbsp;  #nav li:hover a<br>
+&nbsp;  {<br>
+&nbsp;   background: #C13333;<br>
+&nbsp;   border-radius: 5px;<br>
+&nbsp;   color: #FFF;<br>
+&nbsp;   left: 0em;<br>
+&nbsp;  }<br>
+&nbsp;  <br>
+&nbsp;  #nav li:hover ul a<br>
+&nbsp;  {<br>
+&nbsp;   background: #C13333;<br>
+&nbsp;   border-radius: 2px;<br>
+&nbsp;   color: #FFF;<br>
+&nbsp;   padding: 0.1em 0.3em;<br>
+&nbsp;   left: 0em;<br>
+&nbsp;  }<br>
+&nbsp;  <br>
+&nbsp;  #nav li:hover ul a:hover<br>
+&nbsp;  {<br>
+&nbsp;   background: #C13333;<br>
+&nbsp;   border-radius: 2px;<br>
+&nbsp;   color: #FFF;<br>
+&nbsp;  }<br>
+&nbsp;  <br>
+&nbsp;  #nav li ul<br>
+&nbsp;  {<br>
+&nbsp;   display: none;<br>
+&nbsp;  }<br>
+&nbsp;  <br>
+&nbsp;  #nav li ul li<br>
+&nbsp;  {<br>
+&nbsp;   display: block;<br>
+&nbsp;   float: none;<br>
+&nbsp;  }<br>
+&nbsp;  <br>
+&nbsp;  #nav li ul li a<br>
+&nbsp;  {<br>
+&nbsp;   width: auto;<br>
+&nbsp;   min-width: 0px;<br>
+&nbsp;   padding: 0 20px;<br>
+&nbsp;   <br>
+&nbsp;  }<br>
+&nbsp;  <br>
+&nbsp;  #nav ul li a:hover + .hidden, .hidden:hover<br>
+&nbsp;  {<br>
+&nbsp;   display: block;<br>
+&nbsp;   text-transform: uppercase;<br>
+&nbsp;   font-size: 0.8em;<br>
+&nbsp;  }<br>
+&nbsp; <br>
+&nbsp;  </p>
+
+<p>&nbsp;  #nav &gt; ul &gt; li &gt; ul<br>
+&nbsp;  {<br>
+&nbsp;   display: none;<br>
+&nbsp;  }</p></span>
+					<span class="time">Jul 17, 2014 at 10:52 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="431946">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/d037e770ffe1b7040e321a39fb4c0891.jpg" alt="Brad">
+					</figure>
+					<h4>Brad</h4>
+					<span><p>Ignore that previous comment. I got the disappearing to 
+work, but I’m struggling with the alignment, as well as the dropdown 
+list is behind my banner image which hides some selections.</p>
+
+<p>here is my current code:</p>
+
+<p>/*********************************************************************************/<br>
+/* Nav &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; */<br>
+/*********************************************************************************/</p>
+
+<p> #nav<br>
+ {<br>
+&nbsp; position: absolute;<br>
+&nbsp; right: 0em;<br>
+&nbsp; top: 2.2em;<br>
+ }</p>
+
+<p>&nbsp; #nav &gt; ul &gt; li<br>
+&nbsp; {<br>
+&nbsp;  float: left;<br>
+&nbsp; }<br>
+&nbsp; <br>
+&nbsp;  #nav &gt; ul &gt; li:last-child<br>
+&nbsp;  {<br>
+&nbsp;   padding-right: 0;<br>
+&nbsp;  }</p>
+
+<p>&nbsp;  #nav &gt; ul &gt; li &gt; a,<br>
+&nbsp;  #nav &gt; ul &gt; li &gt; span<br>
+&nbsp;  {<br>
+&nbsp;   display: block;<br>
+&nbsp;   margin-left: 0.7em;<br>
+&nbsp;   padding: 0.5em 1.2em;<br>
+&nbsp;   letter-spacing: 0.06em;<br>
+&nbsp;   text-decoration: none;<br>
+&nbsp;   text-transform: uppercase;<br>
+&nbsp;   font-size: 1.1em;<br>
+&nbsp;   outline: 0;<br>
+&nbsp;   color: #333;<br>
+&nbsp;  }</p>
+
+<p>&nbsp;  #nav li.active a<br>
+&nbsp;  {<br>
+&nbsp;   background: #C13333;<br>
+&nbsp;   border-radius: 5px;<br>
+&nbsp;   color: #FFF;<br>
+&nbsp;  }<br>
+&nbsp;  <br>
+&nbsp;  #nav li a<br>
+&nbsp;  {<br>
+&nbsp;   display: block;<br>
+&nbsp;   margin-left: 0.1em;<br>
+&nbsp;   padding: 0.1em 0.1em;<br>
+&nbsp;   letter-spacing: 0.06em;<br>
+&nbsp;   text-decoration: none;<br>
+&nbsp;   text-transform: uppercase;<br>
+&nbsp;   font-size: 1.1em;<br>
+&nbsp;   outline: 0;<br>
+&nbsp;   color: #333;<br>
+&nbsp;  }<br>
+&nbsp;  <br>
+&nbsp;  #nav ul li:hover a<br>
+&nbsp;  {<br>
+&nbsp;   background: #C13333;<br>
+&nbsp;   border-radius: 5px;<br>
+&nbsp;   color: #FFF;<br>
+&nbsp;   left: 0em;<br>
+&nbsp;  }<br>
+&nbsp;  <br>
+&nbsp;  #nav li:hover a<br>
+&nbsp;  {<br>
+&nbsp;   background: #FFFFFF;<br>
+&nbsp;   border-radius: 2px;<br>
+&nbsp;   color: #000;<br>
+&nbsp;   padding: 0.5em 1.2em;<br>
+&nbsp;   left: 11em;<br>
+&nbsp;   box-shadow: 0 2px 2px -1px rgbs(0, 0, 0, 0.055);<br>
+&nbsp;   margin: 5;<br>
+&nbsp;   <br>
+&nbsp;  }<br>
+&nbsp;  <br>
+&nbsp;  #nav li:hover ul a:hover<br>
+&nbsp;  {<br>
+&nbsp;   background: #C13333;<br>
+&nbsp;   border-radius: 2px;<br>
+&nbsp;   color: #FFF;<br>
+&nbsp;  }<br>
+&nbsp;  <br>
+&nbsp;  /*Hide dropdown links until they are needed*/<br>
+li ul {<br>
+ display: none;<br>
+}</p>
+
+<p>/*Make dropdown links vertical*/<br>
+li ul li {<br>
+ display: block;<br>
+ float: none;<br>
+}</p>
+
+<p>/*Prevent text wrapping*/<br>
+li ul li a {<br>
+ width: auto;<br>
+ min-width: 100px;<br>
+ padding: 0 20px;<br>
+}</p>
+
+<p>/*Display the dropdown on hover*/<br>
+ul li a:hover + .hidden, .hidden:hover {<br>
+ display: block;<br>
+}</p></span>
+					<span class="time">Jul 17, 2014 at 11:30 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432040">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/85f2c012012028933dbe1e02515fd00a.jpg" alt="Bhushan">
+					</figure>
+					<h4><a href="http://holzoo.com/" rel="nofollow" target="_blank">Bhushan</a></h4>
+					<span><p>Very useful Indeed, Thank you so much</p></span>
+					<span class="time">Jul 28, 2014 at 8:46 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432043">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/3527028ca2b2ca9a7c5f570221ef6c03.jpg" alt="Cheyenne">
+					</figure>
+					<h4>Cheyenne</h4>
+					<span><p>Hi guys. <br>
+Really like the way this menu is styled and I like how clear the description is. <br>
+I do have one problem…. I have way more list items than you guys have in
+ the example, resulting in that my menu is always displayed as the 
+mobile version on the left side of the page. <br>
+I would love to use this on my website… <br>
+The idea is that I want my logo op the left, and my menu next to it on the right side of the page. Any tips on how to fix this?</p>
+
+<p>Many thanks.</p></span>
+					<span class="time">Jul 28, 2014 at 2:46 pm</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432056">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/97070810af53c8c5e98ed09f1aadb7ec.jpg" alt="Karen">
+					</figure>
+					<h4>Karen</h4>
+					<span><p>Hi,</p>
+
+<p>I love the navigation menu. I thought I had it working. It works fine
+ on my desktop, but when I click the Menu button within my Galaxy S3, 
+nothing happens. </p>
+
+<p>Does anyone has an idea?</p></span>
+					<span class="time">Jul 30, 2014 at 9:22 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432085">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/2b9a94dd7cc36f68276f0424ec780bfe.jpg" alt="Mike">
+					</figure>
+					<h4>Mike</h4>
+					<span><p>Karen,</p>
+
+<p>Same here - not able to get the menu to open on phone (Galaxy S3). 
+Works fine on desktop. Also viewed the jsfiddle examples listed on this 
+page with phone and can confirm that they don’t work either. </p>
+
+<p>Hoping for a fix.</p></span>
+					<span class="time">Aug 4, 2014 at 3:59 pm</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432093">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/97070810af53c8c5e98ed09f1aadb7ec.jpg" alt="Karen">
+					</figure>
+					<h4>Karen</h4>
+					<span><p>Hi Mike,</p>
+
+<p>After struggling for a few days, I decided to implement another menu. This time with some javascript, but it works fine.</p></span>
+					<span class="time">Aug 5, 2014 at 3:37 pm</span>
+				</div>
+			</li>
+			</ul>
+	
+			</ul>
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432070">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/6d4fc069eca7dc7e2a878e3c02741de9.jpg" alt="NamePhilippe">
+					</figure>
+					<h4>NamePhilippe</h4>
+					<span><p>Un très bon Tutorial, merci !!<br>
+A very good tutorial, thank you!</p></span>
+					<span class="time">Aug 1, 2014 at 4:10 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432078">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/dea725dde2fad4ea0343e3b0c3d50eb7.jpg" alt="Maria Reiersol">
+					</figure>
+					<h4><a href="http://reiersol.blogg.no/" rel="nofollow" target="_blank">Maria Reiersol</a></h4>
+					<span><p>I would prefer if the id’s and classes were added in the 
+CSS you provided, for example not just ul {, but ul#menu {. I have other
+ lists in my HTML, and this obviously changes all my lists. I have tried
+ specifying that this should only apply to the menu, but then for some 
+reason the menu changes into looking exactly like it does without any 
+CSS at all.</p>
+
+<p>Could something be done about this?</p></span>
+					<span class="time">Aug 2, 2014 at 1:09 pm</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432079">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/a83435949a2b71b40aad5a2190987e85.jpg" alt="febin">
+					</figure>
+					<h4><a href="http://febinphilip.com/" rel="nofollow" target="_blank">febin</a></h4>
+					<span><p>HELP ME PLZ..&nbsp; I WANT TO ADD SUBITEMS FOR THE SUBMENUS</p></span>
+					<span class="time">Aug 3, 2014 at 3:48 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432080">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/101fc76d458427c3a6b812be42ad0e54.jpg" alt="Jennifer">
+					</figure>
+					<h4>Jennifer</h4>
+					<span><p>I can not get the drop down menu to show up.. .What I am missing…. Please help</p>
+
+<p>&lt;div class=“navbar”&gt;</p>
+
+<p>&lt;label for=“show-menu” class=“show-menu”&gt; Menu&lt;/label&gt;<br>
+&lt;label type=“checkbox” id=“show-menu” role=“button”&gt;<br>
+ <br>
+ &lt;ul class=“mainnav”&gt;<br>
+&nbsp; &lt;li class=“active”&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Findex.html"> Home</a> &lt;/li&gt;<br>
+&nbsp; &lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Fourparish.html">Our Parish</a> &lt;/li&gt;<br>
+&nbsp; &lt;li&gt;<a href="http://medialoot.com/?URL=%23"> Mass </a> &lt;/li&gt;<br>
+&nbsp; &lt;li&gt;<a href="http://medialoot.com/?URL=%23">Bulletins</a> &lt;/li&gt;<br>
+&nbsp; &lt;li&gt;<a href="http://medialoot.com/?URL=%23">Sacraments</a> &lt;/li&gt;<br>
+&nbsp; &lt;li&gt;<a href="http://medialoot.com/?URL=%23">Contact </a>&lt;/li&gt;<br>
+ &lt;/ul&gt;<br>
+&lt;/div&gt;</p>
+
+<p>&lt;/body&gt;<br>
+&lt;/html&gt;/</p>
+
+<p>*Strip the ul of padding and list styling*/<br>
+ul {<br>
+ list-style-type:none;<br>
+ margin:0;<br>
+ padding:0;<br>
+ position: absolute;<br>
+}</p>
+
+<p>/*Create a horizontal list with spacing*/<br>
+li {<br>
+ display:inline-block;<br>
+ float: left;<br>
+ margin-right: 1px;<br>
+}</p>
+
+<p>/*Style for menu links*/<br>
+li a {<br>
+ display:block;<br>
+ min-width:140px;<br>
+ height: 50px;<br>
+ text-align: center;<br>
+ line-height: 50px;<br>
+ font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;<br>
+ color: #fff;<br>
+ background: #2f3036;<br>
+ text-decoration: none;<br>
+}</p>
+
+<p>/*Hover state for top level links*/<br>
+li:hover a {<br>
+ background: #19c589;<br>
+}</p>
+
+<p>/*Style for dropdown links*/<br>
+li:hover ul a {<br>
+ background: #f3f3f3;<br>
+ color: #2f3036;<br>
+ height: 40px;<br>
+ line-height: 40px;<br>
+}</p>
+
+<p>/*Hover state for dropdown links*/<br>
+li:hover ul a:hover {<br>
+ background: #19c589;<br>
+ color: #fff;<br>
+}</p>
+
+<p>/*Hide dropdown links until they are needed*/<br>
+li ul {<br>
+ display: none;<br>
+}</p>
+
+<p>/*Make dropdown links vertical*/<br>
+li ul li {<br>
+ display: block;<br>
+ float: none;<br>
+}</p>
+
+<p>/*Prevent text wrapping*/<br>
+li ul li a {<br>
+ width: auto;<br>
+ min-width: 100px;<br>
+ padding: 0 20px;<br>
+}</p>
+
+<p>/*Display the dropdown on hover*/<br>
+ul li a:hover + .hidden, .hidden:hover {<br>
+ display: block;<br>
+}</p>
+
+<p>/*Style ‘show menu’ label button and hide it by default*/<br>
+.show-menu {<br>
+ font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;<br>
+ text-decoration: none;<br>
+ color: #fff;<br>
+ background: #19c589;<br>
+ text-align: center;<br>
+ padding: 10px 0;<br>
+ display: none;<br>
+}</p>
+
+<p>/*Hide checkbox*/<br>
+input[type=checkbox]{<br>
+&nbsp;   display: none;<br>
+&nbsp;   -webkit-appearance: none;<br>
+}</p>
+
+<p>/*Show menu when invisible checkbox is checked*/<br>
+input[type=checkbox]:checked ~.mainnav li{<br>
+&nbsp;   display: block;<br>
+}</p>
+
+<p><br>
+/*Responsive Styles*/</p>
+
+<p>@media screen and (max-width : 760px){<br>
+ /*Make dropdown links appear inline*/<br>
+ ul {<br>
+&nbsp; position: static;<br>
+&nbsp; display: none;<br>
+ }<br>
+ /*Create vertical spacing*/<br>
+ li {<br>
+&nbsp; margin-bottom: 1px;<br>
+ }<br>
+ /*Make all menu links full width*/<br>
+ ul li, li a {<br>
+&nbsp; width: 100%;<br>
+ }<br>
+ /*Display ‘show menu’ link*/<br>
+ .show-menu {<br>
+&nbsp; display:block;<br>
+ }<br>
+}</p></span>
+					<span class="time">Aug 3, 2014 at 9:08 pm</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432091">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/d101f521d57a46613ab671856c1d8ae3.jpg" alt="Richy">
+					</figure>
+					<h4>Richy</h4>
+					<span><p>How to make the menu always show on mobile without click on the “Show Menu”</p></span>
+					<span class="time">Aug 5, 2014 at 1:13 pm</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432094">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/cf65e3aead7f397385ab0c2691a35cfb.jpg" alt="Tony Thomas">
+					</figure>
+					<h4><a href="http://medialoot.com/main/team" rel="nofollow" target="_blank">Tony Thomas</a></h4>
+					<span><p>@Richy: Just don’t include the ‘Optional Final Step’ part of the tutorial</p></span>
+					<span class="time">Aug 6, 2014 at 5:28 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432103">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/3527028ca2b2ca9a7c5f570221ef6c03.jpg" alt="Cheyenne">
+					</figure>
+					<h4>Cheyenne</h4>
+					<span><p>Could someone help me with this?</p>
+
+<p>The menu pushed down everything else on my page when I hover over the
+ drop down menu. I want the menu to just open on top of the rest of the 
+page instead of pushing everything else down to open. Please help! I 
+need to upload my website ASAP!</p></span>
+					<span class="time">Aug 6, 2014 at 4:25 pm</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432123">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/21cb15f764ff33701a9f662c63849e12.jpg" alt="Aamir">
+					</figure>
+					<h4>Aamir</h4>
+					<span><p>HI,<br>
+Thanks a lot for this great tutorial. Its very easy to use and working perfectly.<br>
+I converted the drop downs to horizontal sub menu. The problem I’m 
+facing now is that the sub menus are appearing just under its parent. I 
+want them to appear on the left of the page.<br>
+Can anyone please tell me how can I do that?<br>
+Here is the link to my JSFIDDLE code  http://jsfiddle.net/Bangash/871no457/</p></span>
+					<span class="time">Aug 8, 2014 at 4:24 pm</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432126">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/21cb15f764ff33701a9f662c63849e12.jpg" alt="Aamir">
+					</figure>
+					<h4>Aamir</h4>
+					<span><p>Never mind I have fixed it. Here is the fix :)<br>
+Replace your code with this one :)</p>
+
+<p>/*Hide dropdown links until they are needed*/<br>
+li ul {<br>
+ display: none;<br>
+ min-width:114%;<br>
+ clear: both;<br>
+ margin-left: 0;<br>
+ left: -14%;<br>
+ background: #eaf3e4;<br>
+}</p></span>
+					<span class="time">Aug 9, 2014 at 3:42 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432133">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/cbfc131e584835a2a499c26f6575a67c.jpg" alt="Rakesh Kumar">
+					</figure>
+					<h4><a href="http://www.binarynote.com/" rel="nofollow" target="_blank">Rakesh Kumar</a></h4>
+					<span><p>I tried to implement your Code on my WordPress theme for 
+the whole day but could not find out where is the problem. Everything 
+seems to be working on full screen but whenever i resize my window only 
+label appear and nothing happens. Do you have any idea what may be the 
+problem. I can provide the link for you. Please do me this favour as i 
+do not want to use jquery on my theme.</p></span>
+					<span class="time">Aug 10, 2014 at 2:03 pm</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432137">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/21cb15f764ff33701a9f662c63849e12.jpg" alt="AamirName">
+					</figure>
+					<h4>AamirName</h4>
+					<span><p>Can you share a working link Rakesh. Let me have a glance of it.</p></span>
+					<span class="time">Aug 11, 2014 at 8:40 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432135">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/21aa863d2f3f5b96212556d07be41a19.jpg" alt="Jane">
+					</figure>
+					<h4><a href="http://www.manoushcuisine.com/test.html" rel="nofollow" target="_blank">Jane</a></h4>
+					<span><p>Hello all</p>
+
+<p>I love the load speed of this menu.</p>
+
+<p>Can someone tell me how to justify the whole menu to the center of the page?</p>
+
+<p>I cant get it right. Tried to put the whole html into a new div, but it not working.</p>
+
+<p>Thank you very much.</p></span>
+					<span class="time">Aug 10, 2014 at 5:26 pm</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432167">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/72435ab8080d9b756302bcb92233e54f.jpg" alt="Nicholas Stewart">
+					</figure>
+					<h4><a href="http://www.lifeofafamilyman.com/" rel="nofollow" target="_blank">Nicholas Stewart</a></h4>
+					<span><p>Hey guys i am new to this and I have it working but I want
+ to get rid of having to mouse over to display the menu item how do i do
+ this</p>
+
+<p>http://www.lifeofafamilyman.com/Contact_us.php</p></span>
+					<span class="time">Aug 16, 2014 at 10:15 pm</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432168">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/72435ab8080d9b756302bcb92233e54f.jpg" alt="Nicholas Stewart">
+					</figure>
+					<h4><a href="http://www.lifeofafamilyman.com/" rel="nofollow" target="_blank">Nicholas Stewart</a></h4>
+					<span><p>I am trying to create a sumenu for a submenu I used the 
+code that AArim gave to us but I can’t get it to look right is there 
+another code or anyone who can help i am new to this codeing and trying 
+to learn.&nbsp; Thanks in advance</p></span>
+					<span class="time">Aug 16, 2014 at 11:43 pm</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432169">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/21cb15f764ff33701a9f662c63849e12.jpg" alt="Aamir">
+					</figure>
+					<h4>Aamir</h4>
+					<span><p>Hi Nicholas<br>
+Change line no 59 on your menu css from</p>
+
+<p>li ul li {<br>
+display: block;<br>
+}</p>
+
+<p>to</p>
+
+<p>li ul li {<br>
+display: inline;<br>
+}</p>
+
+<p>hope this will fix your issue.</p></span>
+					<span class="time">Aug 17, 2014 at 1:43 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432170">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/72435ab8080d9b756302bcb92233e54f.jpg" alt="Nick">
+					</figure>
+					<h4>Nick</h4>
+					<span><p>AAmir</p>
+
+<p>I changed the code but the submenu is still blocking the next menu 
+item here is a link  and now I have some white spaces :(&nbsp; sorry for
+ all the questions and problems I do love your menu </p>
+
+<p>http://www.lifeofafamilyman.com/avg.php</p></span>
+					<span class="time">Aug 17, 2014 at 5:00 pm</span>
+				</div>
+			</li>
+			</ul>
+	
+			</ul>
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432171">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/72435ab8080d9b756302bcb92233e54f.jpg" alt="nick">
+					</figure>
+					<h4><a href="http://www.lifeofafamilyman.com/" rel="nofollow" target="_blank">nick</a></h4>
+					<span><p>HEy guys I am still having some issues with the 
+menu.&nbsp; I have it built the way i want it with all th submenus but 
+they are overlapping the next item and the menu keeps falling befind the
+ page content anybody know how i can fix this quick and easy<br>
+a good example is my homepage &nbsp;   http://lifeofafamilyman.com</p></span>
+					<span class="time">Aug 18, 2014 at 11:19 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432175">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/3fa3383be50cbad3ae704ec1ac64468b.jpg" alt="Ashra Ismail">
+					</figure>
+					<h4><a href="http://www.google.com/" rel="nofollow" target="_blank">Ashra Ismail</a></h4>
+					<span><p>Really helpful..thanks :)</p></span>
+					<span class="time">Aug 19, 2014 at 7:37 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432180">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/68a96b1272174ace139a78890ef3c29e.jpg" alt="Dennis">
+					</figure>
+					<h4>Dennis</h4>
+					<span><p>The demo works nicely on my desktop.<br>
+It does not work on my Samsung Galaxy 3.<br>
+On the Galaxy, it shows the green “Show Menu” line at the start of the demo.<br>
+I cannot click on the green “Show Menu” link.&nbsp; If I double-click, 
+it magnifies the screen a little bit.&nbsp; Another double-click reduces
+ the screen back to normal size.&nbsp; <br>
+I cannot get the menu to do anything by using a single click.</p></span>
+					<span class="time">Aug 20, 2014 at 12:02 pm</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432191">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/29ee6a903db70d341dcb38aec65310cc.jpg" alt="steph">
+					</figure>
+					<h4>steph</h4>
+					<span><p>Thank you this was very helpful. There is one flaw in the 
+mobile design however. When tapping on a link to reveal the drop down 
+menu, the drop down can not be hidden again by re-clicking the parent 
+link. I would like the links with drop downs to work like the “show 
+menu” bar with a tap on/off function. Could this be done by turning a ul
+ li into a button somehow? If anyone has been able to accomplish this I 
+would love to know as it is a major usability issue on mobile devices.</p></span>
+					<span class="time">Aug 20, 2014 at 7:37 pm</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432230">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/21cb15f764ff33701a9f662c63849e12.jpg" alt="Aamir">
+					</figure>
+					<h4>Aamir</h4>
+					<span><p>Hi Steph,<br>
+It works fine. You may have done something wrong. Can you please provide a live link so that I can check it.</p></span>
+					<span class="time">Aug 29, 2014 at 8:52 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432227">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/087dde98409616d42c6cace7a8365ab5.jpg" alt="Barry">
+					</figure>
+					<h4><a href="http://www.slchandy.co.uk/" rel="nofollow" target="_blank">Barry</a></h4>
+					<span><p>hello i have used your tutorial to help improve my website
+ but i am having a problem i have a few more links than you used in the 
+tutorial and it has set my menu on to two lines i need to have it all 
+one line what part of the css do i change or do i need to add a line of 
+css to make the links a bit closer together instead of how they set out 
+on this tutorial</p>
+
+<p>link to my test page showing what i mean http://slchandy.co.uk/test/menu.html</p></span>
+					<span class="time">Aug 29, 2014 at 5:58 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432229">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/21cb15f764ff33701a9f662c63849e12.jpg" alt="Aamir">
+					</figure>
+					<h4>Aamir</h4>
+					<span><p>Hi Barry,<br>
+Change your li a to the given below.</p>
+
+<p>li a {<br>
+ display:block;<br>
+ height: 50px;<br>
+ color: #fff;<br>
+ background: #000000;<br>
+ text-decoration: none;<br>
+&nbsp;  &nbsp;  &nbsp; font-size: 18pt;<br>
+&nbsp;  &nbsp;  &nbsp; font-weight: bold;<br>
+&nbsp;  &nbsp;  &nbsp; padding-right: 15px;<br>
+ min-width:150px;<br>
+ text-align: center;<br>
+ line-height: 50px;<br>
+}</p>
+
+</span>
+					<span class="time">Aug 29, 2014 at 8:51 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432232">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/29ee6a903db70d341dcb38aec65310cc.jpg" alt="steph">
+					</figure>
+					<h4>steph</h4>
+					<span><p>Hi Aamir,<br>
+Thanks for replying. It’s not that I’ve done something wrong but more 
+like I’m trying to use this in a slightly different way then it was 
+designed. Even the demo works the same way. Eg, in the demo “portfolio” 
+has a drop down and is a link itself. Can the link on portfolio be 
+removed so portfolio when taped on a mobile device simply displays and 
+hides it’s drop down child elements? This would make it function in the 
+same way the menu button does. Currently when you tap “portfolio” on a 
+mobile device it will display the drop down, but there is no way of 
+hiding the drop down again unless you go to a different link or close 
+the full menu. I think it would be a persons natural instinct to tap 
+again on “portfolio” to close the drop down, but in the current code it 
+would merely direct them to the link for portfolio, which in the demo of
+ course is a #. Unfortunately I am not so masterful at html/css that I 
+can modify it to this degree. Though I do wonder if anyone knows if it 
+actually can be done? It would require a li to have the functions of the
+ checkbox button and I do not know if such a combination is possible.</p></span>
+					<span class="time">Aug 29, 2014 at 11:17 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432310">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/bc245d87b0272ba36784e2ff95a774fa.jpg" alt="Shahbaz Ahmed Bhatti">
+					</figure>
+					<h4>Shahbaz Ahmed Bhatti</h4>
+					<span><p>Very Gooooooooooooooooooood<br>
+U r So Nice Tony<br>
+Love your Sharing</p></span>
+					<span class="time">Sep 10, 2014 at 3:34 pm</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432316">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/7949f4e7448e4ae1b25f2e99efec0c7a.jpg" alt="arnolfo">
+					</figure>
+					<h4><a href="http://arnolfodesign.com/" rel="nofollow" target="_blank">arnolfo</a></h4>
+					<span><p>Hi,</p>
+
+<p>I’m really trying to implement this menu but cannot get the mobil 
+menu to show upon click. Any chance someone could give me an idea of 
+what I am doing wrong?</p>
+
+<p>html code:<br>
+&lt;nav&gt;<br>
+ &lt;label for=“show-menu” class=“show-menu”&gt;Show Menu&lt;/label&gt;<br>
+&lt;input type=“checkbox” id=“show-menu” role=“button”&gt;<br>
+&lt;ul id=“menu”&gt;<br>
+&lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Findex.htm">HOME</a>&lt;/li&gt;<br>
+&lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Fabout.html">ABOUT</a><br>
+&lt;ul&gt;<br>
+&nbsp; &lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Fhistory.html">HISTORY</a>&lt;/li&gt;<br>
+&nbsp; &lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Ffull_spectrum_service.html">FULL SPECTRUM SERVICE</a>&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;<br>
+&lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Fcolors.html">COLORS</a><br>
+&lt;ul&gt;<br>
+&nbsp;  &lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Fcolors_dry.html">DRY COLOR</a>&lt;/li&gt;<br>
+&nbsp;  &lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Fcolors_liquids.html">LIQUID COLOR</a><br>
+&nbsp;  &lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Fcolors_concentrates.html">CONCENTRATES</a>&lt;/li&gt;<br>
+&nbsp; &lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Fpre-color.html">PRE-COLOR COMPOUNDS</a>&lt;/li&gt;<br>
+&nbsp; &lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Fstock_concentrates.html">STOCK CONCENTRATES</a>&lt;/li&gt;<br>
+&lt;/ul&gt;&lt;/li&gt;<br>
+&lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Fpartner_services.html">SERVICE SOLUTIONS</a><br>
+&lt;ul&gt;<br>
+&nbsp;  &lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Ftesting.html">TESTING</a>&lt;/li&gt;<br>
+&nbsp;  &lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Ftraining.html">TRAINING</a>&lt;/li&gt;<br>
+ &lt;/ul&gt;&lt;/li&gt;</p>
+
+<p>&lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Ftech_team.html">TECH TEAM</a>&lt;/li&gt;<br>
+&lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Forder.html">PLACE ORDER</a>&lt;/li&gt;<br>
+&lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Fmsds.html">REQUEST MSDS</a>&lt;/li&gt;<br>
+&lt;li&gt;<a href="http://medialoot.com/?URL=http%3A%2F%2Fcontact_CFP.html">CONTACT</a>&lt;/li&gt;&lt;/ul&gt;<br>
+ <br>
+&lt;/nav&gt;</p>
+
+<p>CSS:</p>
+
+<p>/*Style ‘show menu’ label button and hide it by default*/<br>
+.show-menu {<br>
+ font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;<br>
+ text-decoration: none;<br>
+ color: #fff;<br>
+ background: #1b1a18;<br>
+ text-align: center;<br>
+ padding: 10px 0;<br>
+ display: none;<br>
+}</p>
+
+<p>/*Hide checkbox*/<br>
+input[type=checkbox]{<br>
+&nbsp;   display: none;<br>
+}</p>
+
+<p>/*Show menu when invisible checkbox is checked*/<br>
+input[type=checkbox]:checked ~ #menu{<br>
+&nbsp;   display: block;<br>
+}</p>
+
+<p>@media screen and (max-width : 760px){<br>
+ /*Make dropdown links appear inline*/<br>
+ nav ul {<br>
+&nbsp; position: static;<br>
+&nbsp; display: none;<br>
+ }<br>
+ /*Create vertical spacing*/<br>
+ nav li {<br>
+&nbsp; margin-bottom: 1px;<br>
+ }<br>
+ /*Make all menu links full width*/<br>
+ nav ul li, li a {<br>
+&nbsp; width: 100%;<br>
+ }<br>
+ <br>
+ <br>
+&nbsp; /*Display ‘show menu’ link*/<br>
+ .show-menu {<br>
+&nbsp; display:block;<br>
+ }<br>
+ <br>
+nav { background-color:#1b1a18;<br>
+width:auto;<br>
+text-align:center;<br>
+}</p>
+
+<p>nav ul ul {<br>
+ display: none;<br>
+}</p>
+
+<p>nav ul li:hover &gt; ul {<br>
+&nbsp; display: block;<br>
+&nbsp; width:150px;<br>
+&nbsp; box-shadow:2px 2px 3px #666666;<br>
+-webkit-box-shadow:2px 2px 3px #666666;<br>
+&nbsp; <br>
+ }</p>
+
+<p>nav ul {<br>
+ margin-left:60px;<br>
+ margin-right:auto;<br>
+ padding:0px;<br>
+ position:relative;<br>
+ }<br>
+ <br>
+nav ul:after {<br>
+&nbsp; content: “”; clear: both; <br>
+&nbsp; display: block;<br>
+&nbsp; <br>
+ }<br>
+ <br>
+nav ul li {<br>
+ padding: 0;<br>
+ list-style: none;<br>
+ float:left;<br>
+}</p>
+
+<p>nav ul li:hover {<br>
+ background-color: #3d4146;<br>
+}</p>
+
+<p>nav ul li:hover a {<br>
+&nbsp;  color: #fff;<br>
+}</p>
+
+<p>nav ul &gt;li &gt; a {<br>
+ font-family:‘robotoregular’, sans-serif;<br>
+ font-size: 16px; <br>
+ color: #FFF !important;<br>
+ font-weight: normal;<br>
+ text-decoration: none !important;<br>
+ padding: 8px 24px 10px 24px;<br>
+ display:block;<br>
+-webkit-transition: all .25s;<br>
+ -moz-transition: all .25s;<br>
+ -o-transition: all .25s;<br>
+ transition: all .25s;<br>
+}</p>
+
+<p>nav ul ul {<br>
+ background: #3d4146; <br>
+ padding: 0;<br>
+ position: absolute;<br>
+ margin-left:0;<br>
+ top: 100%;<br>
+ z-index:10000;<br>
+ }</p>
+
+<p>nav ul ul li {<br>
+&nbsp; float: none; <br>
+&nbsp; border-top: 1px solid #6b727c;<br>
+&nbsp; border-bottom: 1px solid #575f6a;<br>
+&nbsp; position: relative;<br>
+&nbsp; }</p>
+
+<p>nav ul ul li a {<br>
+&nbsp;  padding: 15px 40px;<br>
+&nbsp;  color: #fff;<br>
+&nbsp;  font-size: 14px;<br>
+&nbsp;  padding: 8px 6px 10px 6px;<br>
+&nbsp;  <br>
+&nbsp; } </p>
+
+<p>nav ul ul li a:hover {<br>
+&nbsp;   background: #4b545f;<br>
+&nbsp;   }</p></span>
+					<span class="time">Sep 11, 2014 at 2:35 pm</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432321">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/7949f4e7448e4ae1b25f2e99efec0c7a.jpg" alt="arnolfo">
+					</figure>
+					<h4><a href="http://arnolfodesign.com/" rel="nofollow" target="_blank">arnolfo</a></h4>
+					<span><p>My apologies for dumping code and questions onto your 
+site. I really like your solutions but just cannot make it work for my 
+site even though I have made it work in jsFiddle. I understand it works 
+for a great many users but after 12 hours of trying my lack of a full 
+understanding of CSS has won the day.</p>
+
+
+
+<p>&nbsp;</p></span>
+					<span class="time">Sep 12, 2014 at 11:57 am</span>
+				</div>
+			</li>
+			</ul>
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432324">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/61cff625ba59395130f37f599ca56639.jpg" alt="Paul">
+					</figure>
+					<h4>Paul</h4>
+					<span><p>This menu does not work under Android. When clicking on 
+the “show menu” button the menu does not expand and show. Even the demo 
+on this page is not working at all. I’m using the nativ Android browser 
+with a Samsung Galaxy S2. Does anybody know a workaround? Anybody know 
+hod to fix this?</p></span>
+					<span class="time">Sep 14, 2014 at 4:44 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432341">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/3512f6d16d5edcd249eb22d7a96cf290.jpg" alt="will">
+					</figure>
+					<h4>will</h4>
+					<span><p>Tried all the tutorials mentioned on here but just can’t 
+get the menu to sit centered on the page, getting it centred as a 
+desktop version breaks the stacked version for mobiles and vice versa.</p>
+
+<p>Any help appreciated as it’s a great little menu!</p>
+
+<p>Thanks</p>
+
+<p>Will.</p></span>
+					<span class="time">Sep 15, 2014 at 12:56 pm</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432342">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/ce40d6c79f298d710c5c829accaf496e.jpg" alt="Mansi">
+					</figure>
+					<h4>Mansi</h4>
+					<span><p>Thank you for posting this. Its easy to understand. I was 
+able to implement this into my code but I am not able to make a small 
+change to this. So hoping you could help me.<br>
+On small screens, the menu is visible when the show-menu option is 
+clicked, but how do I make the menu disappear after a list item has been
+ clicked. How do we collapse it back ?</p></span>
+					<span class="time">Sep 15, 2014 at 5:34 pm</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432346">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/56345821ba3451065c270f09071be2fb.jpg" alt="ezequiel">
+					</figure>
+					<h4>ezequiel</h4>
+					<span><p>how to collapse it back once an element is clicked ?</p></span>
+					<span class="time">Sep 17, 2014 at 12:05 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432348">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/21cb15f764ff33701a9f662c63849e12.jpg" alt="Aamir">
+					</figure>
+					<h4>Aamir</h4>
+					<span><p>Just click again the same element that you clicked.</p></span>
+					<span class="time">Sep 17, 2014 at 1:33 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432354">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/ce40d6c79f298d710c5c829accaf496e.jpg" alt="Mansi">
+					</figure>
+					<h4>Mansi</h4>
+					<span><p>That was not my question. Let me phrase it properly ..... <br>
+(On a mobile device) After I click a list item, my page scrolls down to 
+the respective section. So ideally, I want the menu to collapse back in 
+place after a list item is clicked. The user should not have to click 
+the ‘show menu’ link after he clicks the list item link. The menu should
+ collapse automatically.</p></span>
+					<span class="time">Sep 17, 2014 at 2:53 pm</span>
+				</div>
+			</li>
+			</ul>
+	
+			</ul>
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432356">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/bee9de73ef1c2f30e0ac296b1fa77f06.jpg" alt="Genius Amigos">
+					</figure>
+					<h4><a href="http://www.geniusamigos.com/" rel="nofollow" target="_blank">Genius Amigos</a></h4>
+					<span><p>Nice work! It’d be more nicer if it contained another 
+break point for medium size screen such as tablets.&nbsp; And I’d like 
+to know if it can always show dropdown menu parts on the browsers like 
+opera mini.</p></span>
+					<span class="time">Sep 18, 2014 at 3:12 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432357">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/f905cc3b229a869f433e20ba7f78bc86.jpg" alt="Eskem Studio">
+					</figure>
+					<h4><a href="http://www.eskem-studio.com/" rel="nofollow" target="_blank">Eskem Studio</a></h4>
+					<span><p>/* Fix for Android */<br>
+body { <br>
+&nbsp; -webkit-animation: bugfix infinite 1s; <br>
+}<br>
+@-webkit-keyframes bugfix { <br>
+&nbsp; from { padding: 0; } <br>
+&nbsp; to { padding: 0; } <br>
+}</p>
+
+<p>/* default checkbox */<br>
+input[type=checkbox] {<br>
+&nbsp; position: absolute;<br>
+&nbsp; top: -9999px;<br>
+&nbsp; left: -9999px;<br>
+}</p>
+
+<p>label { <br>
+&nbsp; cursor: pointer;<br>
+&nbsp; user-select: none;<br>
+}</p></span>
+					<span class="time">Sep 18, 2014 at 3:39 pm</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432366">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/56345821ba3451065c270f09071be2fb.jpg" alt="Ezequiel">
+					</figure>
+					<h4>Ezequiel</h4>
+					<span><p>I was more than happy !<br>
+It was working on my galaxy s4 mini.</p>
+
+<p>But when i try on galaxy Y (young) and motorola flip it doesn’t work.<br>
+This device have android 2.2.XX and small screen.</p>
+
+<p>The punctually is: the show menu green button is displayed but i can`t click on it and display the list.</p>
+
+<p>Tested with this site live demo.</p>
+
+<p>Could you give me a hand with this issue please ?</p></span>
+					<span class="time">Sep 21, 2014 at 2:17 pm</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432368">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/5af0f654ff3e44d101467e2ba7179e31.jpg" alt="reza">
+					</figure>
+					<h4>reza</h4>
+					<span><p>hi i need html and css cod for this nav bar pleas help tomarow i have exam :</p>
+
+<p>http://www.freeuploadsite.com/do.php?img=54186</p></span>
+					<span class="time">Sep 22, 2014 at 4:46 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432369">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/0646d74b35fb61868eff181121ca76af.jpg" alt="Bangash">
+					</figure>
+					<h4>Bangash</h4>
+					<span><p>Reza,<br>
+The easiest way is to download the whole page and extract the required html and css.</p></span>
+					<span class="time">Sep 22, 2014 at 4:50 am</span>
+				</div>
+			</li>
+			
+	
+			
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="432370">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/bc245d87b0272ba36784e2ff95a774fa.jpg" alt="Shahbaz Ahmed Bhatti">
+					</figure>
+					<h4>Shahbaz Ahmed Bhatti</h4>
+					<span><p>Dear Reza,</p>
+
+<p>Share your email id with me, or you can download the example from 
+here according to your requirement. it took a lot much my time to make 
+like this<br>
+http://bewefa.nl/projects/Bhatti/Dranken_11_09_2014/menu.html</p>
+
+<p>Take your mouse on Celeberty Choice Last 3rd menu and see the drop down menu</p>
+
+<p><br>
+any question please ask</p>
+
+<p>shahbazahmedbhattii ( at) gmail ( dot) com</p></span>
+					<span class="time">Sep 22, 2014 at 5:04 am</span>
+				</div>
+			</li>
+			
+	
+			<ul class="children">
+			<li>
+				<div class="text-message">
+					<a href="#leave-comment" class="reply-box" rel="433329">Reply »</a>
+					<figure class="author-holder">
+						<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/196555ae41e145c4f37d5d8a84626ba8.jpg" alt="sunita">
+					</figure>
+					<h4>sunita</h4>
+					<span><p>&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;meta charset=“UTF-8”&gt;<br>
+&lt;title&gt;CSS Only Navigation Menu&lt;/title&gt;<br>
+&lt;meta name=“viewport” c initial-scale=1”&gt;<br>
+&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>
+&lt;style&gt;<br>
+#btn { display:none;} <br>
+#n10 ul {list-style-type:none;margin:0;padding:0;position:absolute;}<br>
+#n10 li{display:inline-block;float: left;margin-right: 1px; margin-bottom: 1px;}<br>
+#n10 li a{display:block;min-width:100px;height: auto;text-align: 
+center;line-height: 30px;font-family:tahoma;color: #fff;background: 
+green;text-decoration: none; font-size:14px;}<br>
+#n10 li a:hover{color: white;background-color: pink; transition:all 0.8s ease-out;}<br>
+#n10 li ul {display:none;position:absolute;}<br>
+#n10 li:hover ul {display:block;margin-top:1px; }<br>
+#n10 li ul li {clear:both; display : block;}<br>
+#n10 li ul li a {display:block;width:100%;height: auto;text-align: 
+center; font-family:tahoma;color: #fff;background:#0cf;text-decoration: 
+none; font-size:12px;}<br>
+#n10 li ul li a:hover {color: white;background-color:pink; transition:all 0.8s ease-out; }</p>
+
+<p>@media screen and (max-width : 622px){<br>
+#btn {padding:7px;text-align: center;background:gray; color:white; 
+cursor:pointer; transition:all 0.8s ease-in;font-family: 
+tahoma;font-size:14px; display:block;margin-bottom:1px;}<br>
+#panel{display: none;}<br>
+#n10 ul {list-style-type:none;margin:0;padding:0;position: static;}<br>
+#n10 li{width:100%; float:left;}<br>
+#n10 li a{display: block;color: white;text-align: center;line-height: 
+30px;text-decoration: none; heigt:auto; background-color: green;}<br>
+#n10 li a:hover{color: white;background-color: pink; transition:all 0.8s ease-out;}</p>
+
+<p>#n10 li ul {display:none;position:relative;}<br>
+#n10 li:hover ul {display:block;}<br>
+#n10 li ul li {clear:both; display : block;}<br>
+#n10 li ul li a {display:block;width:100%;height: auto;text-align: 
+center; font-family:tahoma;color: #fff;background:#0cf;text-decoration: 
+none; font-size:12px;}<br>
+#n10 li ul li a:hover {color: white;background-color:pink; transition:all 0.8s ease-out; }<br>
+}<br>
+&lt;/style&gt;<br>
+[removed][removed]<br>
+[removed] <br>
+$(document).ready(function(){<br>
+&nbsp;   $(”#btn”).click(function(){<br>
+&nbsp;  &nbsp;  &nbsp; $(”#panel”).slideToggle(“slow”);<br>
+&nbsp;   });<br>
+});<br>
+[removed]<br>
+&lt;div id=“btn”&gt;MENU ≡&lt;/div&gt;<br>
+&lt;div id=“panel”&gt;<br>
+&nbsp;  &nbsp; &lt;ul id=“n10”&nbsp; outside none none; margin: 0px ! important; padding: 0px ! important;”&gt;<br>
+&nbsp;  &nbsp;  &nbsp; &lt;li&gt;<a href="http://medialoot.com/?URL=%23">Home</a>&lt;/li&gt;<br>
+&nbsp;  &nbsp;  &nbsp; &lt;li&gt;<br>
+&nbsp;  &nbsp;  &nbsp;  &nbsp; <a href="http://medialoot.com/?URL=%23">About Us ￬</a><br>
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;   &lt;ul&gt;<br>
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &lt;li&gt;<a href="http://medialoot.com/?URL=%23">Who We Are</a>&lt;/li&gt;<br>
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &lt;li&gt;<a href="http://medialoot.com/?URL=%23">What We Do</a>&lt;/li&gt;<br>
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;   &lt;/ul&gt;&nbsp; <br>
+&nbsp;  &nbsp;  &nbsp; &lt;/li&gt;<br>
+&nbsp;  &nbsp;  &nbsp; &lt;li&gt;<br>
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  <a href="http://medialoot.com/?URL=%23">Services ￬</a><br>
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;   &lt;ul&gt;<br>
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &lt;li&gt;<a href="http://medialoot.com/?URL=%23">Who We Are</a>&lt;/li&gt;<br>
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &lt;li&gt;<a href="http://medialoot.com/?URL=%23">What We Do</a>&lt;/li&gt;<br>
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;   &lt;/ul&gt;&nbsp; <br>
+&nbsp;  &nbsp;  &nbsp; &lt;/li&gt;<br>
+&nbsp;  &nbsp;  &nbsp; &lt;li&gt;<a href="http://medialoot.com/?URL=%23">Gallery</a>&lt;/li&gt;<br>
+&nbsp;  &nbsp;  &nbsp; &lt;li&gt;<a href="http://medialoot.com/?URL=%23">Career</a>&lt;/li&gt;<br>
+&nbsp;  &nbsp;  &nbsp; &lt;li&gt;<a href="http://medialoot.com/?URL=%23">Contact us</a>&lt;/li&gt;<br>
+&nbsp;   &lt;/ul&gt;<br>
+ &lt;/div&gt;</p>
+
+<p> &lt;/body&gt;<br>
+&lt;/html&gt;</p>
+
+</span>
+					<span class="time">Jun 16, 2015 at 7:24 am</span>
+				</div>
+			</li>
+			</ul></ul>
+	
+	</ul>
+		<div class="comment-pagination"><p>&nbsp;<strong>1</strong>&nbsp;<a href="http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/P50">2</a>&nbsp;<a href="http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/P50">&gt;</a>&nbsp;</p></div></section>
+
+<section class="leave-comment" id="leave-comment">
+	<div class="section-title">
+		<h4>Leave a comment</h4>
+	</div>
+	<div class="leave-comment-form logged">
+		
+		<form id="comment_form" method="post" action="http://medialoot.com/">
+<div class="hiddenFields">
+<input name="ACT" value="107" type="hidden">
+<input name="RET" value="http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css" type="hidden">
+<input name="URI" value="blog/how-to-create-a-responsive-navigation-menu-using-only-css" type="hidden">
+<input name="XID" value="" type="hidden">
+<input name="entry_id" value="1294" type="hidden">
+<input name="parent_id" value="0" type="hidden">
+<input name="site_id" value="1" type="hidden">
+</div>
+
+
+					<fieldset>
+				<div class="text-row row">
+					<div class="textarea-holder">
+						<textarea class="val-required" name="comment" cols="10" rows="1"></textarea>
+					</div>
+				</div>
+				<div class="text-row row">
+					<div class="text-holder">
+						<input value="Name" name="name" type="text">
+					</div>
+				</div>
+				<div class="text-row row">
+					<div class="text-holder email-holder">
+						<input class="val-email val-required" value="Email" name="email" type="text">
+					</div>
+				</div>
+				<div class="text-row row">
+					<div class="text-holder">
+						<input value="Website" name="url" type="text">
+					</div>
+				</div>
+				<div class="text-row row">
+					<label for="notify_me"><input id="notify_me" name="notify_me" value="yes" checked="checked" type="checkbox"> Notify me of follow-up comments?</label>
+				</div>
+				<div class="btn-row">
+					<input value="Submit" type="submit">
+				</div>
+			</fieldset>
+				<div class="snap" style="position: absolute !important; left: -10000px !important;"><input id="snap_pxNZTqrUd" name="snap_pxNZTqrUd" value="dDEIfbbjxsEid" type="text"></div>
+<script type="text/javascript">document.getElementById("snap_pxNZTqrUd").value = "dDEIfbbjxsEid";</script>
+</form>
+		
+	</div>
+</section>
+</div>
+<!-- End Embed Comments -->
+
+        					</div>
+        				</div>
+        			<aside class="big-sidebar">
+    					<div class="block-white">
+    						
+    						<div class="sidebar-social">
+    							<h3>Share This Post</h3>
+    							<a class="sidebar-share facebook" href="http://www.facebook.com/plugins/like.php?href=http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=1529196177293085" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=100,width=200');return false;"><span>61</span></a>
+    							<a class="sidebar-share twitter" href="https://twitter.com/share?url=http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/&amp;text=How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS&amp;via=medialoot" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span>54</span></a>
+    							<a class="sidebar-share gplus" href="https://plus.google.com/share?url=http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span>18</span></a>
+    							<a class="sidebar-share stumble" href="http://www.stumbleupon.com/submit?url=http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=800');return false;"><span>0</span></a>
+    							<div class="clear"></div>
+    						</div>
+    						
+    						<div class="divider"></div>
+    						<div class="author">
+    						    							
+    							    								<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/tony.jpg" alt="Tony Thomas" width="150">
+    								<img src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/author-circle.png" id="author-circle">
+    							    							<p class="name">Tony Thomas</p>
+    							<p class="desc">Tony creates pixel-perfect UI kits &amp; icons. His pug, Wednesday, is Medialoot's beloved mascot.</p>
+    							
+    						    							<div class="clear"></div>
+    						</div>
+   
+							<p id="write-for-us"><a href="">Write for us</a></p>
+							<!--Ad Spot-->
+							<!--<div class="divider"></div>
+							<div class="advert">
+								<script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=11670589&PluID=0&w=200&h=175&ord=$$CacheBustingToken$$&wm=transparent[timestamp]&ucm=true"></script>
+								<noscript>
+								<a href="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=brd&FlightID=11670589&Page=&PluID=0&Pos=879234012" target="_blank"><img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&FlightID=11670589&Page=&PluID=0&Pos=879234012" border=0 width=200 height=175></a>
+								</noscript>
+							</div>-->
+							<!--
+							<div class="divider"></div>
+							<div class="advert">
+								<img src=""/>
+								<p><a href="">Click here to begin your no-obligation trial</a></p>
+								<p class="by">ads via Carbon</p>
+							</div>
+							<div class="divider"></div>
+							End Ad Spot-->
+							<div class="sidebar-resources">
+	<h4>Related Resources</h4>
+					
+				
+	<div class="sidebar-resource-item">
+		<figure>
+			<div class="fader">
+				<a href="http://medialoot.com/item/flat-ui-kit-for-sketch-2/">
+					<img class="swap1" alt="Flat UI Kit for Sketch 2 1" src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/198x126_Flat-UI-Kit-for-Sketch-Preview-1.jpg">
+				</a>
+				<a href="http://medialoot.com/item/flat-ui-kit-for-sketch-2/">
+					<img class="swap2" alt="Flat UI Kit for Sketch 2 1" src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/198x126_Flat-UI-Kit-for-Sketch-Preview-2.jpg">
+				</a>
+			</div>
+			<div class="title">
+				<a href="">Flat UI Kit for Sketch 2</a>
+				<span class="price"><span>$8</span></span>				
+			</div>
+			<div class="clear"></div>
+		</figure>
+	</div>
+				
+	<div class="sidebar-resource-item">
+		<figure>
+			<div class="fader">
+				<a href="http://medialoot.com/item/social-media-sharing-widgets/">
+					<img class="swap1" alt="CSS Social Media Sharing Boxes 1" src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/198x126_Social-sharing-Boxes-Preview-1.jpg">
+				</a>
+				<a href="http://medialoot.com/item/social-media-sharing-widgets/">
+					<img class="swap2" alt="CSS Social Media Sharing Boxes 1" src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/198x126_Social-sharing-Boxes-Preview-3.jpg">
+				</a>
+			</div>
+			<div class="title">
+				<a href="">CSS Social Media Sharing Boxes</a>
+				<span class="price"><span>$5</span></span>				
+			</div>
+			<div class="clear"></div>
+		</figure>
+	</div>
+				
+	<div class="sidebar-resource-item">
+		<figure>
+			<div class="fader">
+				<a href="http://medialoot.com/item/responsive-newsletter-email-template/">
+					<img class="swap1" alt="Responsive Newsletter Email Template 1" src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/198x126_Responsive-Email-Template-Preview-1.jpg">
+				</a>
+				<a href="http://medialoot.com/item/responsive-newsletter-email-template/">
+					<img class="swap2" alt="Responsive Newsletter Email Template 1" src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/198x126_Responsive-Email-Template-Preview-4.jpg">
+				</a>
+			</div>
+			<div class="title">
+				<a href="">Responsive Newsletter Email Template</a>
+				<span class="price"><span>$10</span></span>				
+			</div>
+			<div class="clear"></div>
+		</figure>
+	</div>
+				
+	<div class="sidebar-resource-item">
+		<figure>
+			<div class="fader">
+				<a href="http://medialoot.com/item/lumino-pro-admin-bootstrap-template/">
+					<img class="swap1" alt="Lumino Pro: Bootstrap Admin Template 1" src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/198x126_Lumino-Pro-Admin-Bootstrap-Template-Preview-Cover1.jpg">
+				</a>
+				<a href="http://medialoot.com/item/lumino-pro-admin-bootstrap-template/">
+					<img class="swap2" alt="Lumino Pro: Bootstrap Admin Template 1" src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/198x126_Lumino-Pro-Admin-Bootstrap-Template-Preview-4.jpg">
+				</a>
+			</div>
+			<div class="title">
+				<a href="">Lumino Pro: Bootstrap Admin Template</a>
+				<span class="price"><span>$16</span></span>				
+			</div>
+			<div class="clear"></div>
+		</figure>
+	</div>
+				
+	<div class="sidebar-resource-item">
+		<figure>
+			<div class="fader">
+				<a href="http://medialoot.com/item/active-store-ui-kit/">
+					<img class="swap1" alt="Active Store UI Kit 1" src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/198x126_Active-Store-UI-Kit-Preview-1.jpg">
+				</a>
+				<a href="http://medialoot.com/item/active-store-ui-kit/">
+					<img class="swap2" alt="Active Store UI Kit 1" src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/198x126_Active-Store-UI-Kit-Preview-6.jpg">
+				</a>
+			</div>
+			<div class="title">
+				<a href="">Active Store UI Kit</a>
+				<span class="price"><span>$12</span></span>				
+			</div>
+			<div class="clear"></div>
+		</figure>
+	</div>
+				
+	<div class="sidebar-resource-item">
+		<figure>
+			<div class="fader">
+				<a href="http://medialoot.com/item/skewed-landing-page-template/">
+					<img class="swap1" alt="Skewed - Landing Page Template 1" src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/198x126_Skewed-Landing-Page-Template-Preview-1b.jpg">
+				</a>
+				<a href="http://medialoot.com/item/skewed-landing-page-template/">
+					<img class="swap2" alt="Skewed - Landing Page Template 1" src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/198x126_Skewed-Landing-Page-Template-Preview-4b.jpg">
+				</a>
+			</div>
+			<div class="title">
+				<a href="">Skewed - Landing Page Template</a>
+				<span class="price"><span>$9</span></span>				
+			</div>
+			<div class="clear"></div>
+		</figure>
+	</div>
+	
+	<div class="clear"></div>
+</div>
+							
+						</div>
+	 					
+					</aside>
+				</div>
+			</div>
+		</div>
+	<!--End Single Article-->
+
+    
+
+<footer id="footer">
+	<div class="social-block">
+		<div class="fix-width">
+			<div class="social-holder">
+				<ul class="social">
+					
+					<li><a href="https://www.facebook.com/MediaLoot" title="Like us" class="facebook">facebook</a></li>
+					<li><a href="https://twitter.com/medialoot" title="Follow us" class="twitter">twitter</a></li>
+					<li><a href="http://dribbble.com/medialoot" title="Follow us" class="dribble">dribble</a></li>
+					<li><a href="https://plus.google.com/+Medialoot" title="Google+" class="gplus" rel="publisher">Google+</a></li>
+					<li><a href="#email-signup" title="Get our emails" class="email fancybox">email</a></li>
+					<li><a href="http://feeds.feedburner.com/medialoot" title="Read our stuff" class="rss">rss</a></li>
+				</ul>
+			</div>
+			<div class="pop-ups">
+				<ul>
+					<li>
+						<div class="popup-holder">
+							<a class="faq popup-link" href="http://medialoot.com/main/faq/">FAQ</a>
+							<div class="bulb-popup">
+							
+								<span class="question">I’ve downloaded a freebie and want to use it. How do I need to provide attribution?</span>
+								<p>Attribution for free resources must be provided in 
+conjunction any time the freebie is used, on the same page where the 
+resource appears on your design. Or, you can purchase a premium version 
+of the free resource.</p>
+							
+								<a href="http://medialoot.com/main/faq/" class="all">See all </a>
+								<a href="http://medialoot.com/main/faq/" class="next">Next » </a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="popup-holder">
+							<a class="popup-link speech" href="http://medialoot.com/main/faq/">speech</a>
+							<div class="bulb-popup">
+								<div class="form">
+									<form action="http://medialoot.com/?ACT=115" accept-charset="utf-8" method="post"><div style="display:none">
+<input name="params_id" value="72577463" type="hidden">
+</div>
+										<input name="url" value="http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css" type="hidden">
+										<fieldset>
+											<span>Ask a question</span>
+											<div class="text-row row">
+												<div class="text-holder">
+													<input value="Name" class="focus" name="name" type="text">
+												</div>
+											</div>
+											<div class="text-row row">
+												<div class="text-holder email-holder">
+													<input class="val-email val-required focus" value="email@example.com" name="email" type="text">
+												</div>
+											</div>
+											<div class="text-row row">
+												<div class="textarea-holder">
+													<textarea class="val-required focus" cols="10" rows="1" name="message">Question</textarea>
+												</div>
+											</div>
+											<div class="btn-row">
+												<input value="Submit" type="submit">
+											</div>
+										</fieldset>
+									<div class="snap" style="position: absolute !important; left: -10000px !important;"><input id="snap_ZfGHjrKnH" name="snap_ZfGHjrKnH" value="dDEIfbbjxsEid" type="text"></div>
+<script type="text/javascript">document.getElementById("snap_ZfGHjrKnH").value = "dDEIfbbjxsEid";</script>
+</form>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="popup-holder">
+							<a class="popup-link bulb" href="http://medialoot.com/main/contact/">bulb</a>
+							<div class="bulb-popup">
+								<div class="form">
+									<form action="http://medialoot.com/?ACT=115" accept-charset="utf-8" method="post"><div style="display:none">
+<input name="params_id" value="72577464" type="hidden">
+</div>
+										<input name="url" value="http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css" type="hidden">
+										<fieldset>
+											<span>Suggest a resource</span>
+											<div class="text-row row">
+												<div class="text-holder">
+													<input value="Name" class="focus" name="name" type="text">
+												</div>
+											</div>
+											<div class="text-row row">
+												<div class="text-holder email-holder">
+													<input class="val-email val-required focus" value="email@example.com" name="email" type="text">
+												</div>
+											</div>
+											<div class="text-row row">
+												<div class="textarea-holder">
+													<textarea class="val-required focus" cols="10" rows="1" name="message">Message</textarea>
+												</div>
+											</div>
+											<div class="btn-row">
+												<input value="Submit" type="submit">
+											</div>
+										</fieldset>
+									<div class="snap" style="position: absolute !important; left: -10000px !important;"><input id="snap_hdBXiYhKk" name="snap_hdBXiYhKk" value="dDEIfbbjxsEid" type="text"></div>
+<script type="text/javascript">document.getElementById("snap_hdBXiYhKk").value = "dDEIfbbjxsEid";</script>
+</form>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="join"><a class="join-link" href="http://medialoot.com/join/">Join us</a></div>			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="fix-width">
+			<strong class="logo"><a href="http://medialoot.com/">MediaLoot</a></strong>
+			<p> <a href="http://medialoot.com/main/team/">About</a> | <a href="http://medialoot.com/main/license/">License</a> | <a href="http://medialoot.com/main/terms/">Terms &amp; Privacy</a> | <a href="http://medialoot.com/member/perks/">Member Perks</a> | © 2015 Medialoot</p>
+		</div>
+	</div>
+</footer>
+<div class="support-popup" id="email-signup">
+	<div class="form">
+		<form action="http://medialoot.us5.list-manage.com/subscribe/post?u=2bcff092c029bf5f6885526bc&amp;id=0252b57bec" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+			<fieldset>
+				<h4 class="title">Sign up to our Newsletter</h4>
+				<p>Get site updates, freebies, and MediaLoot news.</p>
+				<div class="row">
+					<div class="text-holder email-holder">
+						<input class="val-email val-required focus" value="email@example.com" name="EMAIL" id="mce-EMAIL" type="email">
+						<span class="star"></span>
+					</div>
+				</div>
+				<div class="btn-row">
+					<div class="btn">
+						<input value="Subscribe" name="subscribe" id="mc-embedded-subscribe" type="submit">
+					</div>
+				</div>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
+
+<div class="support-popup" id="contact">
+	<div class="form">
+		
+		<form action="http://medialoot.com/?ACT=115" accept-charset="utf-8" method="post"><div style="display:none">
+<input name="params_id" value="72518693" type="hidden">
+</div>
+			<input name="url" value="http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css" type="hidden">
+			<fieldset>
+				<h4 class="title">Contact Us</h4>
+				<div class="row">
+					<div class="text-holder">
+						<input value="Name" class="focus" name="name" type="text">
+					</div>
+					<div class="text-holder email-holder">
+						<input class="val-email val-required focus" value="email@example.com" name="email" type="text">
+						<span class="star"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="textarea-holder">
+						<textarea class="val-required focus" cols="30" rows="10" name="message">Message</textarea>
+						<span class="star"></span>
+					</div>
+				</div>
+				<div class="btn-row">
+					<div class="btn">
+						<input value="Submit" type="submit">
+					</div>
+					<a class="cancel" href="#">Cancel</a>
+				</div>
+			</fieldset>
+		<div class="snap" style="position: absolute !important; left: -10000px !important;"><input id="snap_QyMRdPvZO" name="snap_QyMRdPvZO" value="dDEIfbbjxsEid" type="text"></div>
+<script type="text/javascript">document.getElementById("snap_QyMRdPvZO").value = "dDEIfbbjxsEid";</script>
+</form>
+		
+	</div>
+</div>
+<div class="support-popup" id="set">
+	<div class="form">
+		<form action="http://medialoot.com/?ACT=115" accept-charset="utf-8" method="post"><div style="display:none">
+<input name="params_id" value="72518695" type="hidden">
+</div>
+			<input name="url" value="http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css" type="hidden">
+			<fieldset>
+				<h4 class="title">Suggest a resource</h4>
+				<div class="row">
+					<div class="text-holder">
+						<input value="Name" class="focus" name="name" type="text">
+					</div>
+					<div class="text-holder email-holder">
+						<input class="val-email val-required focus" value="email@example.com" name="email" type="text">
+						<span class="star"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="textarea-holder">
+						<textarea class="val-required focus" cols="30" rows="10" name="message">Message</textarea>
+						<span class="star"></span>
+					</div>
+				</div>
+				<div class="btn-row">
+					<div class="btn">
+						<input value="Submit" type="submit">
+					</div>
+					<a class="cancel" href="#">Cancel</a>
+				</div>
+			</fieldset>
+		<div class="snap" style="position: absolute !important; left: -10000px !important;"><input id="snap_TyxXKnWDK" name="snap_TyxXKnWDK" value="dDEIfbbjxsEid" type="text"></div>
+<script type="text/javascript">document.getElementById("snap_TyxXKnWDK").value = "dDEIfbbjxsEid";</script>
+</form>
+	</div>
+</div>
+<div class="support-popup" id="faq">
+	<h4 class="title">FAQ</h4>
+	<p>Attribution for free resources must be provided in conjunction any 
+time the freebie is used, on the same page where the resource appears on
+ your design. Or, you can purchase a premium version of the free 
+resource.</p>
+	<a href="http://medialoot.com/main/faq/" class="all">See all </a>
+	<a href="http://medialoot.com/main/faq/" class="next">Next » </a>
+</div>
+	
+    <script type="text/javascript" src="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/933119607a0bf8149ecbefa70e3ba45b688c2069.js"></script>
+    <!-- page-specific JS -->
+		
+	
+	
+	
+	<script type="text/javascript">
+	$(document).ready(function(){commentValidation();get_social_counts();});
+	</script>
+	
+		<link rel="stylesheet" type="text/css" href="How%20To%20Create%20A%20Responsive%20Navigation%20Menu%20Using%20Only%20CSS%20%20%20Medialoot_files/settings.css" media="screen">
+	
+	
+		
+	
+	
+	
+
+<div style="width: 48px; display: none; position: absolute;" class="optionsDivVisible drop-select topsearchselect ml-header"><div class="select-top"></div><div class="select-center"><ul><li><a href="#"></a></li><li class="selected"><a href="#">All</a></li><li><a href="#">UI</a></li><li><a href="#">Graphics</a></li><li><a href="#">Icons</a></li><li><a href="#">Fonts</a></li><li><a href="#">Print</a></li><li><a href="#">Articles</a></li></ul><div class="select-bottom"></div></div></div><div class="ui-helper-hidden-accessible" aria-relevant="additions" aria-live="assertive" role="log"></div><div style="top: 0px;" id="top-ad"><a href="http://medialoot.com/join/"></a><svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" id="ad-close"><path fill="currentColor" d="M28 22.398L19.594 14 28 5.602 22.398 0 14 8.402 5.598 0 0 5.602 8.398 14 0 22.398 5.598 28 14 19.598 22.398 28"></path></svg><div id="timer"><span>4</span><span>6</span><span>16</span></div></div></body></html>

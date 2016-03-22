@@ -1,0 +1,36 @@
+import java.sql.*;
+
+public class BeanAcademicYear {
+
+	Connection con;
+	PreparedStatement pstmt;
+	ResultSet rs = null;
+	String arr[] = null;
+	int j = 0;
+	String url = "jdbc:mysql://192.168.1.21.:3306/main_cet";
+
+	public void getAcademicYear() {
+		try {
+
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection(url, "root", "administrator");
+			String str = "select * from macademic_year ";
+
+			pstmt = con.prepareStatement(str);
+			rs = (ResultSet) pstmt.executeQuery();
+
+			while (rs.next()) {
+				System.out.println("id " + rs.getString(1) + " name " + rs.getString(2));
+			}
+			if (rs != null) {
+				rs.close();
+			}
+
+			// System.out.println(" vector details");
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			
+			
+			
+			

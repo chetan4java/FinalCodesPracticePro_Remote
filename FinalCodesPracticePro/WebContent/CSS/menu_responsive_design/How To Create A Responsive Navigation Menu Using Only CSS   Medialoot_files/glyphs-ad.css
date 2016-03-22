@@ -1,0 +1,123 @@
+#glyphs-font{
+height: 65px;
+width: 332px;
+  fill: #fff;
+opacity: .8;
+margin-right: 200px;
+}
+#glyphs-ad{
+height: 53px;
+margin-bottom: 7px;
+padding-right: 18px;
+opacity:.9;
+}
+#glyphs-logo{
+height: 38px;
+margin-bottom: 14px;
+line-height: 64px;
+}
+.line{
+stroke: #fff;
+stroke-width:1.2px;
+}
+.line.sm{
+stroke-width:.75px;
+}
+
+.fill{
+fill: pink;
+opacity:0;
+}
+
+#glyph-banner .line, .line.sm{
+	stroke-dasharray: 180;
+	stroke-dashoffset: 180;
+}
+
+#glyph-banner .line, .line.sm{
+ 	-webkit-animation: dash .6s linear forwards;
+	-moz-animation: dash .6s linear forwards;
+	animation: dash .6s linear forwards;
+}
+
+#gear .line{
+-webkit-animation-delay:.3s;
+-moz-animation-delay:.3s;
+animation-delay:.3s;}
+#coffee .line{
+-webkit-animation-delay:.6s;
+-moz-animation-delay:.6s;
+animation-delay:.6s;}
+
+#pin .line{
+-webkit-animation-delay:1s;
+-moz-animation-delay:1s;
+animation-delay:1s;}
+
+#camera .line, #camera .line.sm{
+-webkit-animation-delay:1.4s;
+-moz-animation-delay:1.4s;
+animation-delay:1.4s;}
+
+#pencil .line{
+-webkit-animation-delay:1.8s;
+-moz-animation-delay:1.8s;
+animation-delay:1.8s;}
+
+#video .line{
+-webkit-animation-delay:2.2s;
+-moz-animation-delay:2.2s;
+animation-delay:2.2s;}
+
+@-webkit-keyframes dash {
+  from {stroke-dashoffset:180;}
+  to {stroke-dashoffset: 0;}
+}
+@-moz-keyframes dash {
+  from {stroke-dashoffset:180;}
+  to {stroke-dashoffset: 0;}
+}
+@keyframes dash {
+  from {stroke-dashoffset:180;}
+  to {stroke-dashoffset: 0;}
+}
+
+#glyph-banner .fill{
+-webkit-animation: fill 1s linear forwards;
+-moz-animation: fill 1s linear forwards;
+animation: fill 1s linear forwards;
+-webkit-animation-delay:1.7s;
+-moz-animation-delay:1.7s;
+animation-delay:1.7s;
+}
+
+@-webkit-keyframes fill {
+  from{opacity:0;}
+  to {opacity:0.25;}
+}
+@-moz-keyframes fill {
+  from{opacity:0;}
+  to {opacity:0.25;}
+}
+@keyframes fill {
+  from{opacity:0;}
+  to {opacity:0.25;}
+}
+
+#gear{opacity:.2;}
+#coffee{opacity:.3;}
+#pin{opacity:.5;}
+#camera{opacity:.6;}
+#pencil{opacity:.7;margin: 30px;}
+
+#glyph-banner{
+background-image: url("//glyphs.co/img/glyphs-ad-bg.png");
+display: block;
+text-align:center;
+height:64px;
+/* width:1140px; */
+margin:auto;
+padding: 0;
+margin: 0;
+vertical-align: middle;
+}
