@@ -108,6 +108,30 @@ font-size: 20px;
 					<li><a href="PDF_WOrd_xls_ppt_Embed_demos/index.jsp">Embed PDF,WORD,PPT Excel in Web Page </a></li>
 					 
 				</ol>
+				<ol>
+					<li><a href="JavaFilesDemo/index.jsp">show files in folder </a></li>
+					 
+				</ol>
+			</li>
+			
+			<li>Charts 
+				<ol>
+					<li><a href="charts/index.jsp">charts </a></li>
+					 
+				</ol>
+			</li>
+			<li>Gqx-Widgets Projects
+				<ol>
+					<li><a href="Jquery_Widgets/index.jsp">Got to Jqx widgets Projects </a></li>
+					 
+				</ol>
+			</li>
+			
+			<li>Scroll demos
+				<ol>
+					<li><a href="Scroll_demo/index.jsp">Go to Scroll demos </a></li>
+					 
+				</ol>
 			</li>
 			 
 		</ol>

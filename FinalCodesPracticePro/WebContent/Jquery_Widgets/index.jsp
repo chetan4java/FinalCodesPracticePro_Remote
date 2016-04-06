@@ -43,6 +43,13 @@
 					
 				</ol>
 			</li>
+			<li> <strong>All Demos Projects for Reference</strong>
+				<ol>
+					<li><a href="Projects/all-demo-for-reference/index.htm">Go to All Demo(use view source to get the source code )</a></li>
+					 
+					
+				</ol>
+			</li>
 			 
 		</ol>
 	</div>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app id="WebApp_ID" version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+<web-app id="WebApp_ID" version="3.0"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 	<display-name>FinalCodesPracticePro</display-name>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
@@ -9,4 +11,27 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+
+	<!-- GENERATE Pie Chart Servlet Start -->
+	<servlet>
+		<servlet-name>ChartServlet</servlet-name>
+		<servlet-class>util.charts.chart.ChartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChartServlet</servlet-name>
+		<url-pattern>/charts/chart</url-pattern>
+	</servlet-mapping>
+
+	<!-- ImageIO servlet start -->
+	<servlet>
+		<servlet-name>ImageServlet</servlet-name>
+		<servlet-class>util.charts.displayimageusingservlet.ImageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ImageServlet</servlet-name>
+		<url-pattern>/charts/image</url-pattern>
+	</servlet-mapping>
+	<!-- ImageIO servlet end -->
+
+
 </web-app>
